@@ -1,0 +1,488 @@
+/*-----------------------------------------------------------------------------------
+
+Item Name: Borox - Tailwind CSS Personal Portfolio Template.
+Author: ashishmaraviya
+Version: 1
+Copyright 2023
+
+-----------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------
+    Included CSS INDEX
+-----------------------------------------------------------------------------------
+
+01. Typography
+
+02. Utilities
+    - variables
+
+03. Layouts
+    - common
+    - header
+
+04. Pages
+    - home-page
+
+-----------------------------------------------------------------------------------*/
+/*base*/
+/* Typography */
+/* Quicksand font*/
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Montserrat font */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-ExtraLightItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+/* utilities */
+/* variables */
+/* layout */
+/* common */
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Quicksand";
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  line-height: 1.2;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  line-height: 1.2;
+  color:#064E00
+}
+span.ml{
+  color: #064E00;
+}
+@-webkit-keyframes shadowRolling {
+  0% {
+    -webkit-box-shadow: 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  12% {
+    -webkit-box-shadow: 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  25% {
+    -webkit-box-shadow: 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  36% {
+    -webkit-box-shadow: 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0);
+  }
+  50% {
+    -webkit-box-shadow: 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0;
+            box-shadow: 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0;
+  }
+  62% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0;
+  }
+  75% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0;
+  }
+  87% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0;
+  }
+  100% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0);
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0);
+  }
+}
+
+@keyframes shadowRolling {
+  0% {
+    -webkit-box-shadow: 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  12% {
+    -webkit-box-shadow: 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  25% {
+    -webkit-box-shadow: 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0), 0px 0 rgba(121, 99, 224, 0);
+  }
+  36% {
+    -webkit-box-shadow: 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0);
+            box-shadow: 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0, 0px 0 rgba(121, 99, 224, 0);
+  }
+  50% {
+    -webkit-box-shadow: 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0;
+            box-shadow: 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0, 100px 0 #7963e0;
+  }
+  62% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0, 110px 0 #7963e0;
+  }
+  75% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0, 120px 0 #7963e0;
+  }
+  87% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0;
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 130px 0 #7963e0;
+  }
+  100% {
+    -webkit-box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0);
+            box-shadow: 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0), 200px 0 rgba(121, 99, 224, 0);
+  }
+}
+#bx-overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#bx-overlay .loader {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  color: #6CB630;
+  left: -100px;
+  -webkit-animation: shadowRolling 2s linear infinite;
+          animation: shadowRolling 2s linear infinite;
+}
+
+/* Header */
+#top-menu li.active a {
+  color: #6CB630;
+}
+
+.bx-static {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 30;
+  padding: 10px 0;
+}
+
+.bx-fixed {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 30;
+}
+
+.bx-dark {
+  background-color: #1d1a29 !important;
+}
+@media (min-width: 1440px) {
+  .w-full.lg\:w-1\/2.flex.flex-col.justify-center.items-center.space-y-4.lg\:space-y-8.lg\:pl-8.lg\:flex-row.lg\:justify-start.lg\:space-x-8 {
+      width: 50%;
+      height: 40%;
+      position: relative;
+      left: 22%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #mobile-menu {
+    display: block !important;
+  }
+  
+}
+@media (max-width: 1024px) {
+  #mobile-menu {
+    display: none;
+  }
+  .w-full.lg\:w-1\/2.flex.flex-col.justify-center.items-center.space-y-4.lg\:space-y-8.lg\:pl-8.lg\:flex-row.lg\:justify-start.lg\:space-x-8 {
+    position: relative;
+    left: 129px;
+}
+}
+
+@media (max-width: 768px) {
+  .w-full.lg\:w-1\/2.flex.flex-col.justify-center.items-center.space-y-4.lg\:space-y-8.lg\:pl-8.lg\:flex-row.lg\:justify-start.lg\:space-x-8 {
+      position: relative;
+      left: 211px;
+      top: -861px;
+  }
+}
+
+@media (max-width: 425px) {
+  .w-full.lg\:w-1\/2.flex.flex-col.justify-center.items-center.space-y-4.lg\:space-y-8.lg\:pl-8.lg\:flex-row.lg\:justify-start.lg\:space-x-8 {
+      position: relative;
+      left: 129px;
+      /* background-color: red; */
+      position: relative;
+      left: 0px;
+      top: -395px;
+  }
+}
+
+@media (max-width: 320px) {
+  .w-full.lg\:w-1\/2.flex.flex-col.justify-center.items-center.space-y-4.lg\:space-y-8.lg\:pl-8.lg\:flex-row.lg\:justify-start.lg\:space-x-8 {
+/* background-color: red; */
+position: relative;
+top: -23px;
+}
+}
+
+/* Pages */
+/* home-page */
+#scrollup.show {
+  visibility: visible;
+}
+
+#scrollup {
+  visibility: hidden;
+}
+
+/* portfolio */
+.portfolio-tabs ul .active {
+  color: #6CB630 !important;
+}
+
+.portfolio-img .bottom-contain {
+  display: none;
+}
+.portfolio-img:hover .bottom-contain {
+  display: block;
+}
+.portfolio-img:hover .top-contain {
+  display: none;
+}
+
+/* Carrousel de socios */
+
+:root {
+  --animation-speed: 40s;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider .slide-track {
+  animation: scroll var(--animation-speed) linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 250px;
+}
+
+.buttons {
+  min-width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+  font-size: 70px;
+  width: 100px;
+  height: 100px;
+  line-height: 60px;
+  text-align: center;
+  background: #6CB630;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons a:hover {
+  transform: scale(1.2);
+}
+
+.social-iconos {
+  font-size: 40px;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #6cb630;
+  color: #ffffff;
+  transition: 1s;
+}
+.social-iconos:hover{
+	transform: scale(1.1);
+	background-color: transparent;
+	color: white;
+	padding: 7px;
+}

@@ -1,0 +1,72 @@
+/* icon underlines */
+
+.glyphicon.glyphicon:not(:hover) {
+	text-decoration: none;
+}
+
+@media (min-width:768px) {
+	.navbar.navbar-default .breadcrumb > li > a,
+	.navbar.navbar-default .breadcrumb>li+li:before {
+		color: white;
+	}
+
+	.navbar.navbar-default .btn-default {
+		background: #666;
+	}	
+
+	.sidebar.sidebar {
+		background: #444444;
+	}
+	
+	.sidebar-menu.sidebar-menu a {
+		color: white;
+	}
+	
+}
+
+.navbar.navbar-default .navbar-brand {
+	color: white;
+}
+
+.bs-sidebarlogo a {
+	color: white;
+}
+
+/* vertical menu */
+@media (min-width:768px) {
+
+	.sidebar-menu.sidebar-menu a:hover {
+		color: #999999;
+		background: transparent;
+	}
+
+	.menu-treelike.menu-treelike li > a[aria-expanded="true"] {
+		background-color: #666666;
+	}
+
+	.menu-treelike.menu-treelike ul[data-menulevel]:not([data-menulevel="1"]) > li > a {
+		background-color: #777777;
+	}
+}
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar.mCSB_dragger_bar.mCSB_dragger_bar{
+	background-color: #fff; background-color: rgba(255,255,255,0.2);
+	filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+}
+
+
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar.mCSB_dragger_bar.mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar.mCSB_dragger_bar.mCSB_dragger_bar{
+	background-color: #fff; background-color: rgba(255,255,255,0.5);
+	filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+}
+
+.btn.disabled, .btn[disabled] {
+	color: #bbb;
+}
+
+.rnr-horizontal-lookup {
+	margin-top:10px;
+	height:43px;
+}

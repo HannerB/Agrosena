@@ -1,0 +1,86 @@
+
+  .contenedor {
+    color: #000000;
+    text-align: center;
+  }
+  .cartel {
+    width: 70px;
+    height: 70px;
+    padding: 10px 0px 5px 0px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    border: 3px solid #6cb630;
+    border-radius:35px;
+  }
+  .cartel>div{
+    font-size: 23px;
+    font-family:'Montserrat';
+    animation: fade 3s;
+    line-height: 17px;
+    margin-top: 5px;
+    color: #064e00;
+  }
+  .cartel>div>h3 {
+    margin-top: 2px;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  .contenedor {
+    margin-top: 3%;
+  }
+  .contenido {
+    width: 100%;
+    margin: 0 auto;
+    border: 0px solid black;
+    z-index: 10;
+  }
+
+  .numeros {
+    font-family: 'Chela one', sans-serif;
+    font-size: 60px;
+    transition: .3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  .responsivo1 {
+    display: inline-block
+  }
+  .responsivo2 {
+    display: inline-block
+  }
+  @media (max-width: 450px) {  
+    .contenedor {
+      margin-top: 5%;
+    }
+    .banner {
+     margin-bottom: 30px; 
+    }
+    .cartel {
+      height: 57px;
+      width: 56px;
+    }
+    .cartel>div{
+      font-size: 15px;
+      color: aliceblue;
+    }
+    .cartel>div>h3 {
+      font-size: 8px;
+      margin-top: -6px;
+      color: aliceblue;
+    }
+    h2{
+      color: #064e00 !important ;
+    }
+  }
+  @keyframes fade {
+      0%   {
+        opacity: 0;
+    }
+      30%   {
+        opacity: 0;
+    }  
+      100% {
+        opacity: 1;
+    }
+  }

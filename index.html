@@ -1,0 +1,1778 @@
+<!--========================================================= 
+Item Name: Borox - Tailwind CSS Personal Portfolio Template.
+Author: ashishmaraviya
+Version: 1
+Copyright 2023
+============================================================-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agrojam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- site Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/font/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- contador -->
+    <link rel="stylesheet" href="assets/css/contador.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .btn-derecho {
+            left: 155px;
+            top: -72px;
+            height: 59px;
+            width: 300px;
+            background-color: #6cb630;
+            color: #ffffff;
+            border-radius: 1rem;
+            border: 1px solid #6cb630;
+            box-shadow: 0 0 3px 0px;
+            margin-bottom: 40px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-izquierdo {
+            left: -121px;
+            top: -72px;
+            height: 59px;
+            width: 300px;
+            background-color: #6cb630;
+            color: #ffffff;
+            border-radius: 1rem;
+            border: 1px solid #6cb630;
+            box-shadow: 0 0 3px 0px;
+            margin-bottom: 40px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-derecho.selected {
+            background-color: #0a7700;
+        }
+    
+        .btn-izquierdo.selected {
+            background-color: #0a7700;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Loader -->
+    <div id="bx-overlay">
+        <span class="loader"></span>
+    </div>
+
+    <!-- header -->
+    <header class="bg-[#FFFFFF] w-full bx-static">
+        <nav class="border-gray-200 py-2">
+            <div
+                class="flex flex-wrap justify-between items-center px-6 mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px]">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/img/logo/logo.png" class="w-[200px]" alt="Logo">
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <!-- <a href="output/registros_add.php">
+                        <button type="button"
+                            class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Registrate
+                        </button>
+                    </a> -->
+                    <button data-collapse-toggle="mobile-menu" type="button" id="dropdown-toggle"
+                        class="inline-flex items-center border p-2 text-lg text-gray-500 rounded-lg lg:hidden"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+                    <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 2xl:border-0 lg:border-0 border lg:mt-0 lg-mb-4 lg:p-[0] lg:border-none lg:rounded-[0] lg:text-[15px] mt-4 p-[15px] 2xl:mb-0 xl:mb-0 lg:mb-0 mb-2 border-[#eee] rounded-[30px] text-[13px]"
+                        id="top-menu">
+                        <li class="nav-item active">
+                            <a href="#home" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#quienes_somos" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Quienes
+                                Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#jam" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">¿Qué es un Jam?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#agenda" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#problematicas"
+                                class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Problematicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="output/registros_add.php">
+                                <button type="button"
+                                    class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Registrate
+                                </button>
+                            </a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a href="#blog" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contactanos" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Contactanos</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section id="home" class="section-hero bg-[#6cb6304d] relative"
+        style="background-image: url(assets/img/home/woman-tablet-and-greenhouse-for-plants-inspection-2023-11-27-05-30-26-utc.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat; max-width: 100%; box-sizing: border-box; ">
+        <div
+            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] py-[80px] px-4">
+            <div class="w-full 2xl:h-[90vh] lg:h-[80vh] h-[70vh] max-[320px]:h-[50vh] flex items-center px-2 2xl:max-w-lg xl:max-w-lg lg:max-w-lg lg:w-1/2 lg:mx-0 md:max-w-lg md:w-1/2 md:mx-0 2xl:w-1/2 xl:w-1/2 sm:items-center"
+                data-aos="fade-up" data-aos-duration="2000">
+                <div class="text-center 2xl:text-left xl:text-left lg:text-left md:text-left h-72">
+
+                    <h1
+                        class="text-[#6CB630] 2xl:text-[60px] xl:text-[55px] lg:text-[50px] md:text-[45px] text-[40px] font-bold">
+                        AGRO<span style="color:#064E00">JAM 2024</span> </h1>
+                    <p class="pt-2 text-[#064E00] text-base font-weight-700">
+                        Unete a <span class="text-[#6CB630]">Agrojam</span> el evento de innovación abierta. <br>
+                        Descubre las últimas tendencias, conecta con expertos y conviértete en un solucionador. <br>
+
+                    </p>
+
+                    <br>
+                    <h2 style="font-size:22px; font-weight:800; color:#6CB630">¡Inscríbete aquí y forma parte de la
+                        revolución agrícola! <br> <span class="text-[#064E00] text-[18px] font-bold">Tienes hasta el 29
+                            de octubre a las 12.00 P.M <br></h2>
+
+                    </span>
+
+                    <!-- Contador -->
+                    <div class="contenedor">
+                        <div class="contenido">
+                            <div class="contador">
+                                <div class="responsivo1">
+                                    <div class="cartel">
+                                        <div id="dias"></div>
+                                        <div class="h3">
+                                            <h3>Días</h3>
+                                        </div>
+                                    </div>
+                                    <div class="cartel">
+                                        <div id="horas"></div>
+                                        <div class="h3">
+                                            <h3>Horas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="responsivo2">
+                                    <div class="cartel">
+                                        <div id="minutos"></div>
+                                        <div class="h3">
+                                            <h3>Minutos</h3>
+                                        </div>
+                                    </div>
+                                    <div class="cartel">
+                                        <div id="segundos"></div>
+                                        <div class="h3">
+                                            <h3>Segundos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Contador -->
+
+                   <!--  <a style="display: flex; justify-content: center; align-items: center" href="#">
+                        <button type="button"
+                            class="text-white mt-8 bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">
+                            Registrate
+                        </button>
+                    </a> -->
+
+
+                </div>
+            </div>
+
+            <div class="w-full 2xl:h-[90vh] lg:h-[80vh] h-[70vh] max-[320px]:h-[50vh] flex items-center px-2 2xl:max-w-lg xl:max-w-lg lg:max-w-lg lg:w-1/2 lg:mx-0 md:max-w-lg md:w-1/2 md:mx-0 2xl:w-1/2 xl:w-1/2 sm:items-center"
+                data-aos="fade-up" data-aos-duration="2000">
+                <div class="text-center 2xl:text-left xl:text-left lg:text-left md:text-left h-72">
+
+                    <h1
+                        class="text-[#6CB630] 2xl:text-[60px] xl:text-[55px] lg:text-[50px] md:text-[45px] text-[40px] font-bold">
+                        FECHA DEL<span style="color:#064E00"> EVENTO</span> <i class="fa-regular fa-calendar"></i></h1>
+                    <p class="pt-2 text-[#064E00] text-base font-weight-700 font-size: 32px;" >
+                        <span style="font-size: 22px; " class="text-[#064E00] text-[18px] font-bold"> “Prepárate
+                            para vivir este encuentro <span style="color: #6CB630;">30</span>
+                            y <span style="color: #6CB630;">31</span> de octubre”<br>
+                        </span><br>
+
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="relative">
+            <img src="assets/img/shape/hero-shape.png" alt="hero-shape"
+                class="absolute bottom-0 left-0 right-0 w-full z-10 bg-center bg-cover">
+        </div>
+    </section>
+
+    <!-- Conocenos -->
+    <section id="quienes_somos" class="bg-white 2xl:py-[80px] py-[70px]">
+        <div
+            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px]">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px] px-6 max-[320px]:px-[0px]">
+                <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+
+                    <img src="assets/img/home/campesino_cultivando.jpeg" alt="about-img-1" class="w-full rounded-lg">
+                </div>
+                <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <div class="banner mb-[30px]">
+                        <h2
+                            class="mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                            Somos el puente entre el <span class="text-[#6CB630]">Agro y la Tecnología</span></h2>
+                    </div>
+                    <p class="text-[16px] text-[#777] mb-[30px]" style="text-align: justify;">
+                        En el sector agrícola colombiano, se evidencia una marcada desconexión entre los actores del
+                        agro y las instituciones del Sistema de Ciencia,
+                        Tecnología e Innovación (CTeI). Esta brecha ha resultado en un escaso entendimiento de las
+                        necesidades y problemáticas específicas del agro,
+                        especialmente en cuanto a la integración de las Tecnologías de la Información y las
+                        Comunicaciones (TIC).
+                        La agricultura, tanto en el Atlántico como a nivel nacional, enfrenta deficiencias notables en
+                        términos de tecnificación,
+                        automatización de procesos, logística y gestión, impactando negativamente en la productividad y
+                        presentación de productos finales.
+                        Ante esta situación, la estrategia AgroJam busca cerrar estas brechas mediante actividades
+                        especializadas,
+                        enfocadas en fomentar la innovación y la aplicación de ciencia y tecnología.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel de socios -->
+    <div class="banner text-center mb-[30px] px-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+        <h2
+            class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+            Nuestros <span class="text-[#6CB630]">Patrocinadores</span></h2>
+    </div>
+    <style>
+        .slide img {
+            height: 100px;
+            width: 130px;
+        }
+    </style>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <a href="">
+                    <img style="height: 50px; width: 75px" class="filtro" src="assets/img/patrocinadores/P1.png" alt="" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img class="filtro" src="assets/img/patrocinadores/P2.png" height="100%" width="100%"
+                        alt="" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img class="filtro" src="assets/img/patrocinadores/P3.png" height="100%" width="100%" alt="" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img style="height: 50px; width: 75px" class="filtro" src="assets/img/patrocinadores/P1.png" height="100%" width="100%" alt="" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img class="filtro" src="assets/img/patrocinadores/P2.png" height="100%" width="100%"
+                        alt="" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img class="filtro" src="assets/img/patrocinadores/P3.png" height="100%" width="100%" alt="" />
+                </a>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Que es un Jam -->
+    <section id="jam" class="bg-white 2xl:py-[80px] py-[70px]">
+        <div
+            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px]">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px] px-6 max-[320px]:px-[0px]">
+                <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <div class="banner mb-[30px]">
+                        <h2
+                            class="mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                            ¿Qué es <span class="text-[#6CB630]">un Jam?</span></h2>
+                    </div>
+                    <p class="text-[16px] text-[#777] mb-[30px]" style="text-align: justify;">
+                        Un "Jam Innovation" o "Innovation Jam" es un evento colaborativo y creativo diseñado para
+                        fomentar la generación de ideas, la innovación y la resolución de problemas de manera rápida y
+                        efectiva.
+                        Estos eventos suelen ser intensivos y se centran en reunir a personas con diversos antecedentes,
+                        habilidades y perspectivas para abordar desafíos específicos o explorar nuevas oportunidades.
+                        <br> <br>
+                        La palabra "Jam" en este contexto proviene de la música, donde se refiere a una improvisación
+                        colaborativa y creativa.
+                        De manera similar, en un Innovation Jam, los participantes colaboran de manera abierta y
+                        espontánea para idear soluciones innovadoras.
+                    </p>
+                </div>
+                <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+
+                    <img src="assets/img/home/jam1.jpg" alt="about-img-1" class="w-full rounded-lg">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <section id="jam" class="bg-white 2xl:py-[80px] py-[70px]">
+        <div
+            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px]">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px] px-6 max-[320px]:px-[0px]">
+                <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <div class="banner mb-[30px]">
+                        <h2
+                            class="mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                            ¿Sede del <span class="text-[#6CB630]">evento?</span></h2>
+                    </div>
+                    <p class="text-[16px] text-[#777] mb-[30px]" style="font-size: 24px;">
+                        <strong> - Universidad de la Costa <br> - Calle 58 # 55 – 66 (Barranquilla – Atlántico)</strong>
+                    </p>
+                    <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="300">
+
+                        <img style="max-width: 72%; height: auto; margin-left: 20px;"
+                            src="assets/img/home/CUC-LOGO-LOGO-ESTILO-EDITABLE_removed_page-0003.jpg" alt="about-img-1"
+                            class="w-full rounded-lg">
+                    </div>
+                </div>
+                <!-- <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5837127294594!2d-74.79594850866478!3d10.994761161237088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d083ebdf1eb%3A0xac45c4bfd5e69dc0!2sUniversidad%20De%20la%20Costa!5e0!3m2!1ses!2sco!4v1724362828338!5m2!1ses!2sco"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <style>
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+
+
+    <!-- Agenda -->
+    <section id="agenda" class="section-experience bg-[#6cb6304d] relative">
+        <div class="relative pt-[60px]">
+            <img src="assets/img/shape/bg-shape.png" alt="bg-shape"
+                class="absolute top-0 left-0 right-0 w-full bg-center bg-cover">
+        </div>
+        <div class="2xl:pb-[80px] pb-[70px] 2xl:pt-[80px] md:pt-[70px] pt-[20px]">
+            <div class="banner text-center mb-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                <span class="text-[14px] text-[#777]">Que encontraras en el AgroJam</span>
+                <h2
+                    class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                    Nuestras <span class="text-[#6CB630]"> Actividades</span></h2>
+            </div>
+
+            <div
+                class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6 relative">
+                <!--  <img src="assets/img/shape/shape-8.png" alt="shape-8" class="absolute w-12 -top-10 right-10"> -->
+                <!-- <div class="absolute -top-10 left-10 h-12 w-12 bg-[#3F9600] rounded-full"></div> -->
+                <button class="btn-derecho" onclick="toggleText(1)">AGENDA CONGRESO</button>
+                <button class="btn-izquierdo" onclick="toggleText(2)">AGENDA AGROJAM</button>
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px]">
+
+                    <div class="transition-all justify-start items-start">
+                        <h2 class="text-[20px] font-bold leading-[24px] heading" style="text-align: center;">AGENDA
+                            CONGRESO
+                        </h2>
+                        <h2 id="fecha" class="text-[20px] font-bold leading-[24px]"
+                            style="text-align: center; font-size: 17px">
+                            Miércoles 30 de Octubre</h2>
+                        <div class="border-l-2 pl-6" style="border-color:#064E00;">
+
+                            <div id="agendaDetails">
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        7:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Registro</span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Introducción al evento y objetivos por parte del presentador. <br></li>
+                                        <li>Discurso inaugural de la directora, destacando la importancia de Jam
+                                            AgroTIC y la Presentación de datos relevantes sobre la situación actual del
+                                            sector
+                                            agro.</li>
+
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        08:30 - 09:00 am <span class="ml-[15px] text-[#999] text-[14px]">- Palabras de
+                                            Apertura</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Ponencia: La tecnología como fuente importante en el desarrollo de la
+                                            producción primaria.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        09:00 – 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Instalación Panel: Desafíos y apuestas de País para el Agro, Energía y
+                                            Economía
+                                            popular</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Pausa para café y oportunidad para intercambiar ideas.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="600">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 12, 2010 - 2013</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        10:30 - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
+                                            Internacional: Agricultura y cambio Climático</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Inicio de los solucionadores para creación de sus proyectos para el
+                                            sector agro y TIC.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        11:30 - 12:15 pm <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
+                                            Nacional1: Energías Renovables </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        12:15 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]"> Almuerzo libre
+                                            audiencia - Almuerzo privado con invitados </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        02:00 - 02:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias1-2-3
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        02:30 - 03:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias4-5-6
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        03:00 - 03:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias7-8-9
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        03:30 - 04:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias10-11-12
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        04:00 - 04:30 pm <span class="ml-[15px] text-[#999] text-[14px]">- Coffe
+                                            Break-Snack
+                                            audiencia
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        04:30 - 05:30 pm / 05:30 - 06:00 pm <span
+                                            class="ml-[15px] text-[#999] text-[14px]">- PRESENTACION DE
+                                            POSTERS
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        06:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Cierre de la jornada
+                                            (primer día).
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div id="agendaDetails3" style="display: none;">
+                                <!-- Agrojam -->
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        07:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Registro</span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Continuación del evento y objetivos por parte del presentador. <br></li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        08:30 - 09:00 am <span class="ml-[15px] text-[#999] text-[14px]">- Palabras de
+                                            Apertura</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Ponencia: La tecnología como fuente importante en el desarrollo de la
+                                            producción primaria.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="400">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        09:00 - 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Instalación Panel: Desafíos y apuestas de País para el Agro, Energía y
+                                            Economía
+                                            popular</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Pausa para café y oportunidad para intercambiar ideas.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="600">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 12, 2010 - 2013</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        10:30 - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
+                                            Internacional: Agricultura y cambio Climático</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Continuación de los solucionadores para creación de sus proyectos para el
+                                            sector agro y TIC.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        11:30 - 12:15 pm<span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
+                                            Nacional1: Energías Renovables </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        12:15 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">Almuerzo libre
+                                            audiencia - Almuerzo privado con invitados </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        02:00 - 02:30 pm / 02:30 - 03:00 pm
+                                        <span class="ml-[15px] text-[#999] text-[14px]">- Taller de Creatividad </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        03:00 - 03:30 pm / 03:30 - 04:00 pm <span
+                                            class="ml-[15px] text-[#999] text-[14px]">-
+                                            Taller de Innovación </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        04:00 - 04:30 pm <span class="ml-[15px] text-[#999] text-[14px]">- Coffe
+                                            Break-Snack
+                                            audiencia</span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        04:30 - 05:30 pm / 05:30 - 06:00 pm <span
+                                            class="ml-[15px] text-[#999] text-[14px]">-
+                                            Taller de prototipado </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        06:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Cierre de la jornada
+                                            (primer día). </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Agenda de Agrojam  -->
+
+                    <div class="transition-all justify-start items-start" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="300">
+                        <h2 class="text-[20px] font-bold leading-[24px] heading1" style="text-align: center;">AGENDA
+                            CONGRESO
+                        </h2>
+                        <h2 id="fecha2" class="text-[20px] font-bold leading-[24px]"
+                            style="text-align: center; font-size: 17px">
+                            jueves 31 de Octubre</h2>
+                        <div class="border-l-2 pl-6" style="border-color: #064E00; ">
+
+                            <!-- Jueves Congreso -->
+
+
+                            <div id="agendaDetails1">
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        07:30 pm - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Registro
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        08:30 pm - 09:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Conferencia
+                                            Nacional 2
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        09:30 pm - 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Conferencia
+                                            Nacional 3
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        10:30 pm - 11:00 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias13-14-15
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Ponencias16-17-18
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        11:00 pm - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias19-20-21
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Ponencias22-23-24
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        11:30 pm - 12:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                            Ponencias25-26
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Muestra Folclórica y
+                                            Cierre del Evento
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        12:00 pm - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Almuerzo
+                                            libre
+                                        </span></h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                            aprender a volar? - MaxDrone</li>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Jueves de Agrojam  -->
+
+                            <!--  -->
+                            <div id="agendaDetails4" style="display: none;">
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        07:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Registro
+                                        </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        08:30 - 09:30 am / 09:30 - 10:30 am <span
+                                            class="ml-[15px] text-[#999] text-[14px]">-
+                                            Bootcamp </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        10:30 - 11:00 am / 11:00 - 11:30 am / 11:30 - 12:00 pm <span
+                                            class="ml-[15px] text-[#999] text-[14px]">- Evaluación y Premiación </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Muestra Folclórica y
+                                            Cierre del Evento </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                    data-aos-duration="2000" data-aos-delay="800">
+                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                        <span
+                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                        <span
+                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                    </div>
+                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                    <h4
+                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                        12:00 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Almuerzo
+                                            libre
+                                        </span>
+                                    </h4>
+                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                        <li>Sesión de feedback y evaluación con los participantes.</li>
+                                        <li>Palabras finales por parte de la directora.</li>
+                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Portafolio -->
+    <!--    <div class="banner text-center mb-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+            <span class="text-[14px] text-[#777]">Próximamente...</span>
+            <h2
+                class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                SOLUCIONES PLANTEADAS<span class="text-[#6CB630]">DE LOS "JAM"</span></h2>
+        </div>
+        <div
+            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6">
+            <div class="m-b-minus-24px w-full">
+                <div class="portfolio-content" id="MixItUpDA2FB7" data-aos="fade-up" data-aos-duration="2000"
+                    data-aos-delay="600">
+                    <div class="portfolio-tabs mb-[30px]">
+                        <ul
+                            class="2xl:flex xl:flex md:flex sm:block place-content-center text-center">
+                            <li class="text-[14px] text-[#17181c] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#064E00] cursor-pointer inline-block active"
+                                data-filter="all">
+                                Todos</li>
+                            <li class="text-[14px] text-[#17181c] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#6CB630] cursor-pointer inline-block"
+                                data-filter=".design"></li>
+                            <li class="text-[14px] text-[#17181c] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#6CB630] cursor-pointer inline-block"
+                                data-filter=".development">DEVELOPMENT</li>
+                            <li class="text-[14px] text-[#17181c] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#6CB630] cursor-pointer inline-block"
+                                data-filter=".graphics">GRAPHICS</li>
+                            <li class="text-[14px] text-[#17181c] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#6CB630] cursor-pointer inline-block"
+                                data-filter=".templates">Templates</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-content-items">
+                        <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
+                            <div class="mix graphics templates">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-1.jpg" alt="graphics"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full text-white font-normal text-[12px] px-2 py-1">3D
+                                            Graphics</span>
+                                        <span
+                                            class="bg-black rounded-full text-white font-normal text-[12px] px-2 py-1">Templates</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Nitro - Car
+                                                Service</a>
+                                            <a href="assets/img/portfolio/img-1.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mix design">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-2.jpg" alt="design"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Web
+                                            Design</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Boros -
+                                                Artificial Intelligence</a>
+                                            <a href="assets/img/portfolio/img-2.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mix design">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-3.jpg" alt="design"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Web
+                                            Design</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Mila - Virtual
+                                                Reality</a>
+                                            <a href="assets/img/portfolio/img-3.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mix development">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-4.jpg" alt="development"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Development</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Sen - Hotel
+                                                Website</a>
+                                            <a href="assets/img/portfolio/img-4.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mix templates design">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-1.jpg" alt="templates"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Templates</span>
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Web
+                                            Design</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Ekka -
+                                                eCommerce template</a>
+                                            <a href="assets/img/portfolio/img-1.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mix development graphics">
+                                <div class="portfolio-img truncate rounded-2xl relative">
+                                    <img src="assets/img/portfolio/img-2.jpg" alt="development"
+                                        class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125">
+                                    <h3 class="top-contain absolute top-[15px] right-[15px]">
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Development</span>
+                                        <span
+                                            class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">3D
+                                            Graphics</span>
+                                    </h3>
+                                    <div class="bottom-contain absolute bottom-4 left-4 right-4">
+                                        <div
+                                            class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
+                                            <a href="#" class="text-white text-sm flex items-center">Bukki - Teck
+                                                crafts</a>
+                                            <a href="assets/img/portfolio/img-2.jpg" data-fancybox="gallery"
+                                                class="text-white text-sm grid justify-items-end">
+                                                <p class="hidden">.</p>
+                                                <span
+                                                    class="bg-[#6CB630] h-8 w-8 flex justify-center items-center rounded-md">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+
+
+    <!-- Problematicas -->
+    <section id="problematicas" class="2xl:py-[80px] py-[70px] bg-white relative">
+        <!--  <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+            <img src="assets/img/shape/shape-6.png" alt="shape" class="absolute w-12 h-12 top-28 right-40">
+        </div> -->
+        <div class="banner text-center mb-[30px] px-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+            <span class="text-[14px] text-[#777]">Ayudanos a brindar una solución</span>
+            <h2
+                class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                Problematicas a <span class="text-[#6CB630]">
+                    Solucionar</span></h2>
+        </div>
+        <div class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6"
+            style="display:flex; justify-content:center;">
+            <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-[30px]">
+                <div class="transition-all rounded flex justify-start items-start" data-aos="fade-up"
+                    data-aos-duration="2000" data-aos-delay="300">
+                    <div class="pr-6 border-r border-[#6CB630] max-[480px]:hidden">
+                        <h6
+                            class="2xl:text-[50px] lg:text-[40px] text-[35px] font-bold text-[#6CB630] 2xl:w-[60px] xl:w-[60px] lg:w-[50px] w-[40px] opacity-50">
+                            01</h6>
+                    </div>
+                    <div class="pl-6 border-l">
+                        <div class="flex">
+                            <!-- <img src="assets/img/service/icon-1.png" alt="service-1"> -->
+                        </div>
+                        <h4 class="text-[20px] pt-6 font-bold">Primer Reto</h4>
+                        <p class="pt-2 text-[#777] text-[15px] leading-[28px]">Proximamente...</p>
+                    </div>
+                </div>
+                <div class="transition-all rounded flex justify-start items-start" data-aos="fade-up"
+                    data-aos-duration="2000" data-aos-delay="300">
+                    <div class="pr-6 border-r border-[#6CB630] max-[480px]:hidden">
+                        <h6
+                            class="2xl:text-[50px] lg:text-[40px] text-[35px] font-bold text-[#6CB630] 2xl:w-[60px] xl:w-[60px] lg:w-[50px] w-[40px] opacity-50">
+                            02</h6>
+                    </div>
+                    <div class="pl-6 border-l">
+                        <div class="flex">
+                            <!-- <img src="assets/img/service/icon-2.png" alt="service-2"> -->
+                        </div>
+                        <h4 class="text-[20px] pt-6 font-bold">Segundo Reto</h4>
+                        <p class="pt-2 text-[#777] text-[15px] leading-[28px]"> Proximamente... </p>
+                    </div>
+                </div>
+                <!--    <div class="transition-all rounded flex justify-start items-start" data-aos="fade-up"
+                    data-aos-duration="2000" data-aos-delay="300">
+                    <div class="pr-6 border-r border-[#6CB630] max-[480px]:hidden">
+                        <h6
+                            class="2xl:text-[50px] lg:text-[40px] text-[35px] font-bold text-[#6CB630] 2xl:w-[60px] xl:w-[60px] lg:w-[50px] w-[40px] opacity-50">
+                            03</h6>
+                    </div>
+                    <div class="pl-6 border-l">
+                        <div class="flex">
+                          
+                        </div>
+                        <h4 class="text-[20px] pt-6 font-bold">Tercer Reto</h4>
+                        <p class="pt-2 text-[#777] text-[15px] leading-[28px]">Proximamente...</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="2xl:border-b 2xl:pt-24 lg:border-b lg:pt-12 pt-0 flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-6"
+            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"></div>
+    </section>
+
+
+
+    <!-- Blog -->
+    <section id="blog" class="section-news bg-[#6cb6304d]">
+        <div class="relative pt-[60px]">
+            <img src="assets/img/shape/bg-shape.png" alt="bg-shape"
+                class="absolute top-0 left-0 right-0 w-full bg-center bg-cover">
+        </div>
+        <div class="2xl:pb-[80px] pb-[70px] 2xl:pt-[80px] lg:pt-[80px] pt-[20px]">
+            <div class="banner text-center mb-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                <span class="text-[14px] text-[#777]">BLOG</span>
+                <h2
+                    class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                    Ultimas <span class="text-[#6CB630]"> Noticias</span></h2>
+                <span class="text-[14px] text-[#777]">
+                    La primera edición del evento de innovación abierta, AgroJam Innovation contó con más de 40
+                    solucionadores abordaron desafíos críticos en el sector agrícola del Atlántico. <br> AgroJam
+                    Innovation no solo fue una competencia; fue un testimonio del potencial transformador cuando se unen
+                    la educación, la tecnología y las necesidades reales de la comunidad.
+                </span>
+            </div>
+            <div class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] relative px-6"
+                data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                <div class="relative"></div>
+                <div
+                    class="2xl:absolute 2xl:max-[1140px] xl:absolute xl:max-w-[720px] lg:absolute lg:max-w-[620px] max-w-[100%] relative">
+                    <div class="transition-all justify-start items-start">
+                        <div class="news-slider">
+                            <div class="carousel-wrap">
+                                <div class="owl-carousel news-carousel owl-loaded owl-drag">
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <div class="card bg-white border rounded-2xl p-6">
+                                                    <img src="assets/img/blog/premiacion1.jpg" alt="news-3">
+                                                    <div class="news-card-details mt-[16px]">
+                                                        <p class="text-[13px] leading-[30px] mb-[5px] text-[#6CB630]">
+                                                            Por
+                                                            Calorina Garzón</p>
+                                                        <h5
+                                                            class="pb-[15px] text-[17px] font-bold border-b border-[#dbdada]">
+                                                            Ganadores de AgroJam 2023.</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item">
+                                                <div class="card bg-white border rounded-2xl p-6">
+                                                    <img src="assets/img/blog/premiacion2.jpg" alt="news-3">
+                                                    <div class="news-card-details mt-[16px]">
+                                                        <p class="text-[13px] leading-[30px] mb-[5px] text-[#6CB630]">
+                                                            Por
+                                                            Calorina Garzón</p>
+                                                        <h5
+                                                            class="pb-[15px] text-[17px] font-bold border-b border-[#dbdada]">
+                                                            Ganadores de AgroJam 2023.</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item">
+                                                <div class="card bg-white border rounded-2xl p-6">
+                                                    <img src="assets/img/blog/premiacion3.jpg" alt="news-3">
+                                                    <div class="news-card-details mt-[16px]">
+                                                        <p class="text-[13px] leading-[30px] mb-[5px] text-[#6CB630]">
+                                                            Por
+                                                            Calorina Garzón</p>
+                                                        <h5
+                                                            class="pb-[15px] text-[17px] font-bold border-b border-[#dbdada]">
+                                                            Ganadores de AgroJam 2023.</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item">
+                                                <div class="card bg-white border rounded-2xl p-6">
+                                                    <img src="assets/img/blog/premiacion4.jpg" alt="news-3">
+                                                    <div class="news-card-details mt-[16px]">
+                                                        <p class="text-[13px] leading-[30px] mb-[5px] text-[#6CB630]">
+                                                            Por
+                                                            Calorina Garzón</p>
+                                                        <h5
+                                                            class="pb-[15px] text-[17px] font-bold border-b border-[#dbdada]">
+                                                            Ganadores de AgroJam 2023.</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item">
+                                                <div class="card bg-white border rounded-2xl p-6">
+                                                    <img src="assets/img/blog/premiacion5.jpg" alt="news-3">
+                                                    <div class="news-card-details mt-[16px]">
+                                                        <p class="text-[13px] leading-[30px] mb-[5px] text-[#6CB630]">
+                                                            Por
+                                                            Calorina Garzón</p>
+                                                        <h5
+                                                            class="pb-[15px] text-[17px] font-bold border-b border-[#dbdada]">
+                                                            Ganadores de AgroJam 2023.</h5>
+                                                        <!--  <div class="pt-[15px] text-sm text-[#6CB630]">Leer más<a
+                                                                class="hover:text-[#6CB630]"
+                                                                href="https://www.agropinos.com/blog/nuevas-formas-de-cultivar">
+                                                                <i class="fa-solid fa-arrow-right"></i>
+                                                            </a>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transition-all flex-row 2xl:block xl:block lg:block">
+                    <img src="assets/img/blog/premiacion3_old.jpg" alt="news"
+                        style="width:600px; height:500px; border-radius:15px; ">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactanos" class="section-contact 2xl:py-[80px] py-[70px]">
+        <div class="banner text-center mb-[30px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000"
+            data-aos-delay="300">
+            <h2
+                class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                Colocate en <span class="text-[#6CB630]">contacto</span></h2>
+        </div>
+        <form method="post" action="correo.php" autocomplete="off" id="contactForm">
+        <!-- Formulario de Contacto -->
+        
+        <!-- FIN de Contacto -->
+
+            <div class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6">
+                <div class="m-b-minus-24px w-full">
+                    <div class="grid lg:grid-cols-2 gap-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <div class="mb-0">
+                            <div class="">
+                                <input type="text"
+                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    name="name" id="fname" placeholder="Nombre">
+                            </div> 
+                            <div class="">
+                                <input type="email"
+                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    name="email" id="email" placeholder="Correo Electrónico">
+                            </div>
+                            <div class="">
+                                <input type="tel"
+                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    name="telefono" id="phone" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <div class="">
+                                <textarea class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                name="mensaje" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-3 gap-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <div class="">
+                            
+                        </div>
+                        <div class="" style="text-align:center; vertical-align: middle;">
+                            <button type="submit"
+                                class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2"
+                                id="submitBtn">
+                                Enviar
+                            </button>
+                            <script>
+                                document.getElementById("contactForm").addEventListener("submit", function (event) 
+                                {
+                                    var submitBtn = document.getElementById("submitBtn");
+                                    submitBtn.disabled = true;
+                                    submitBtn.textContent = "Enviando...";
+                                });
+                            </script>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="bg-[#070415]" style="display:flex; justify-content:center; align-items:center;" id="contactanos">
+
+
+        <div
+            class="flex justify-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] 2xl:flex-row xl:flex-row lg:flex-row flex-col md:max-w-[720px] max-[320px]:px-[12px] sm:max-w-[540px] gap-[30px] px-6 py-8">
+            <div class="lg:w-1/2 text-white text-[12px] font-normal 2xl:text-left xl:text-left text-center">
+                Copyright ©
+                <a href="https://redtecnoparque.com/" class="hover:text-white font-semibold">Tecnoparque</a>
+                all rights reserved.
+            </div>
+            <div
+                class="lg:w-1/2 text-white font-normal text-[12px] flex 2xl:justify-end xl:justify-end lg:justify-end justify-between">
+                <a href="javascript:void(0)" class="pr-10 hover:text-white">Privacy Policy</a>
+                <a href="javascript:void(0)" class="hover:text-white">Terms and Conditions</a>
+            </div>
+
+        </div>
+    </footer>
+    <!-- scroll Top -->
+    <div id="scrollup"
+        class="fixed bg-[#6CB630] text-white rounded-full flex justify-center text-center items-center p-2 right-6 cursor-pointer bottom-6 h-10 w-10 z-20">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="assets/js/tailwindcss/frostui.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.parallaxmouse.min.js"></script>
+    <!-- contador -->
+    <script src="assets/js/contador.js"></script>
+
+    <!-- Main Js -->
+    <script src="assets/js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.min.js"></script>
+    <script>
+        function toggleText(tp) {
+            var elements = {
+                agendaDetails: document.getElementById("agendaDetails"),
+                agendaDetails1: document.getElementById("agendaDetails1"),
+                agendaDetails3: document.getElementById("agendaDetails3"),
+                agendaDetails4: document.getElementById("agendaDetails4"),
+            };
+
+            var heading = document.querySelector(".heading");
+            var heading1 = document.querySelector(".heading1");
+            var fecha = document.getElementById("fecha");
+            var fecha2 = document.getElementById("fecha2");
+
+            // Hide all elements initially
+            Object.values(elements).forEach(el => el.style.display = "none");
+
+            // Reset text
+            heading.innerHTML = "Selecciona una agenda";
+            fecha.innerHTML = "";
+            fecha2.innerHTML = "";
+
+            if (tp === 1) {
+                elements.agendaDetails.style.display = "block";
+                elements.agendaDetails1.style.display = "block";
+                heading.innerHTML = "AGENDA CONGRESO";
+                heading1.innerHTML = "AGENDA CONGRESO";
+                fecha2.innerHTML = "Jueves 31 de Octubre";
+                fecha.innerHTML = "Miércoles 30 de Octubre";
+            } else if (tp === 2) {
+                elements.agendaDetails3.style.display = "block";
+                elements.agendaDetails4.style.display = "block";
+                heading.innerHTML = "AGENDA AGROJAM";
+                heading1.innerHTML = "AGENDA AGROJAM";
+                fecha2.innerHTML = "Jueves 31 de Octubre";
+                fecha.innerHTML = "Miércoles 30 de Octubre";
+            }
+        }
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn-izquierdo, .btn-derecho');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover la clase 'selected' de todos los botones
+                    buttons.forEach(btn => btn.classList.remove('selected'));
+                    
+                    // Agregar la clase 'selected' al botón clickeado
+                    this.classList.add('selected');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -29,10 +29,8 @@ Copyright 2023
 
     <style>
         .btn-derecho {
-            left: 155px;
-            top: -72px;
-            height: 59px;
-            width: 300px;
+            height: 60px;
+            width: 400px;
             background-color: #6cb630;
             color: #ffffff;
             border-radius: 1rem;
@@ -43,10 +41,8 @@ Copyright 2023
         }
     
         .btn-izquierdo {
-            left: -121px;
-            top: -72px;
-            height: 59px;
-            width: 300px;
+            height: 60px;
+            width: 400px;
             background-color: #6cb630;
             color: #ffffff;
             border-radius: 1rem;
@@ -112,15 +108,22 @@ Copyright 2023
                         </li>
                         <li class="nav-item">
                             <a href="#problematicas"
-                                class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Problematicas</a>
+                                class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Problemáticas</a>
                         </li>
                         <li class="nav-item">
+                            <a href="registros_add.php">
+                                <button type="button"
+                                    class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Regístrate
+                                </button>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
                             <a href="output/registros_add.php">
                                 <button type="button"
                                     class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Registrate
                                 </button>
                             </a>
-                        </li>
+                        </li> -->
                         <!--<li class="nav-item">
                             <a href="#blog" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Blog</a>
                         </li>
@@ -350,34 +353,33 @@ Copyright 2023
     </section>
 
     <hr>
-    <section id="jam" class="bg-white 2xl:py-[80px] py-[70px]">
-        <div
-            class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px]">
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px] px-6 max-[320px]:px-[0px]">
+    <section id="jam" class="bg-white py-16 lg:py-20 2xl:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-                    <div class="banner mb-[30px]">
-                        <h2
-                            class="mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
-                            ¿Sede del <span class="text-[#6CB630]">evento?</span></h2>
+                    <div class="mb-8">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                            ¿Sede del <span class="text-[#6CB630]">evento?</span>
+                        </h2>
                     </div>
-                    <p class="text-[16px] text-[#777] mb-[30px]" style="font-size: 24px;">
+                    <p class="text-xl sm:text-2xl text-gray-700 mb-8">
                         <strong> - Universidad de la Costa <br> - Calle 58 # 55 – 66 (Barranquilla – Atlántico)</strong>
                     </p>
-                    <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000"
-                        data-aos-delay="300">
-
-                        <img style="max-width: 72%; height: auto; margin-left: 20px;"
-                            src="assets/img/home/CUC-LOGO-LOGO-ESTILO-EDITABLE_removed_page-0003.jpg" alt="about-img-1"
-                            class="w-full rounded-lg">
+                    <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <img src="assets/img/home/CUC-LOGO-LOGO-ESTILO-EDITABLE_removed_page-0003.jpg" alt="about-img-1"
+                            class="w-full max-w-md mx-auto lg:mx-0 rounded-lg">
                     </div>
                 </div>
-                <!-- <div class="transition-all relative" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-
+                <div class="transition-all h-[400px] sm:h-[500px] lg:h-full" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5837127294594!2d-74.79594850866478!3d10.994761161237088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d083ebdf1eb%3A0xac45c4bfd5e69dc0!2sUniversidad%20De%20la%20Costa!5e0!3m2!1ses!2sco!4v1724362828338!5m2!1ses!2sco"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div> -->
+                        class="w-full h-full"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -390,8 +392,6 @@ Copyright 2023
             display: none;
         }
     </style>
-
-
 
     <!-- Agenda -->
     <section id="agenda" class="section-experience bg-[#6cb6304d] relative">
@@ -1208,17 +1208,7 @@ Copyright 2023
                                     </p>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1613,7 +1603,7 @@ Copyright 2023
             data-aos-delay="300">
             <h2
                 class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
-                Colocate en <span class="text-[#6CB630]">contacto</span></h2>
+                Colócate en <span class="text-[#6CB630]">contacto</span></h2>
         </div>
         <form method="post" action="correo.php" autocomplete="off" id="contactForm">
         <!-- Formulario de Contacto -->
@@ -1629,12 +1619,12 @@ Copyright 2023
                                     class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="name" id="fname" placeholder="Nombre">
                             </div> 
-                            <div class="">
+                            <div class="pt-2">
                                 <input type="email"
                                     class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="email" id="email" placeholder="Correo Electrónico">
                             </div>
-                            <div class="">
+                            <div class="pt-2">
                                 <input type="tel"
                                     class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="telefono" id="phone" placeholder="Telefono">
@@ -1643,7 +1633,7 @@ Copyright 2023
                         <div class="mb-0">
                             <div class="">
                                 <textarea class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
-                                name="mensaje" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
+                                name="mensaje" id="exampleFormControlTextarea1" rows="9" placeholder="Mensaje"></textarea>
                             </div>
                         </div>
                     </div>

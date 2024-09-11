@@ -26,41 +26,6 @@ Copyright 2023
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <style>
-        .btn-derecho {
-            height: 60px;
-            width: 400px;
-            background-color: #6cb630;
-            color: #ffffff;
-            border-radius: 1rem;
-            border: 1px solid #6cb630;
-            box-shadow: 0 0 3px 0px;
-            margin-bottom: 40px;
-            transition: background-color 0.3s ease;
-        }
-    
-        .btn-izquierdo {
-            height: 60px;
-            width: 400px;
-            background-color: #6cb630;
-            color: #ffffff;
-            border-radius: 1rem;
-            border: 1px solid #6cb630;
-            box-shadow: 0 0 3px 0px;
-            margin-bottom: 40px;
-            transition: background-color 0.3s ease;
-        }
-    
-        .btn-derecho.selected {
-            background-color: #0a7700;
-        }
-    
-        .btn-izquierdo.selected {
-            background-color: #0a7700;
-        }
-    </style>
-
 </head>
 
 <body class="overflow-x-hidden">
@@ -78,11 +43,6 @@ Copyright 2023
                     <img src="assets/img/logo/logo.png" class="w-[200px]" alt="Logo">
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <!-- <a href="output/registros_add.php">
-                        <button type="button"
-                            class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Registrate
-                        </button>
-                    </a> -->
                     <button data-collapse-toggle="mobile-menu" type="button" id="dropdown-toggle"
                         class="inline-flex items-center border p-2 text-lg text-gray-500 rounded-lg lg:hidden"
                         aria-controls="mobile-menu" aria-expanded="false">
@@ -91,7 +51,7 @@ Copyright 2023
                     </button>
                 </div>
                 <div class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
-                    <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 2xl:border-0 lg:border-0 border lg:mt-0 lg-mb-4 lg:p-[0] lg:border-none lg:rounded-[0] lg:text-[15px] mt-4 p-[15px] 2xl:mb-0 xl:mb-0 lg:mb-0 mb-2 border-[#eee] rounded-[30px] text-[13px]"
+                    <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 mt-4 p-[15px] lg:mt-0 lg:mb-0 lg:p-0 border-[#eee] rounded-[30px] text-[13px]"
                         id="top-menu">
                         <li class="nav-item active">
                             <a href="#home" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Inicio</a>
@@ -110,35 +70,127 @@ Copyright 2023
                             <a href="#problematicas"
                                 class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Problemáticas</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="registros_add.php">
-                                <button type="button"
-                                    class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Regístrate
-                                </button>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a href="output/registros_add.php">
-                                <button type="button"
-                                    class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">Registrate
-                                </button>
-                            </a>
-                        </li> -->
-                        <!--<li class="nav-item">
-                            <a href="#blog" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Blog</a>
+                        <li class="nav-item relative group">
+                            <a href="#congreso" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Congreso</a>
+                            <ul
+                                class="sub-menu absolute hidden bg-white border border-[#ddd] rounded-lg shadow-lg group-hover:block">
+                                <li><a id="openModal"
+                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Información del
+                                        Congreso</a></li>
+                                <li><a href="#subitem2" id="agendaCongreso"
+                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Agenda Congreso</a>
+                                </li>
+                                <li><a id="downloadLink" class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
+                                        onclick="downloadFiles();">Convocatoria</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#contactanos" class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Contactanos</a>
-                        </li>-->
+                            <a class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0" type="button" onclick="button();">
+                                <button>Regístrate</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <script>
+        function downloadFiles() {
+            // Primer archivo
+            const file1 = document.createElement('a');
+            file1.href = 'Directrices-para-autores.pdf'; // Ruta del primer archivo
+            file1.download = 'Directrices-para-autores-e-investigadores';
+            file1.style.display = 'none';
+            document.body.appendChild(file1);
+            file1.click();
+            document.body.removeChild(file1);
+
+            // Segundo archivo
+            const file2 = document.createElement('a');
+            file2.href = 'Modelo-Declaracion-de-originalidad.docx'; // Ruta del segundo archivo
+            file2.download = 'Modelo-Declaracion-de-originalidad';
+            file2.style.display = 'none';
+            document.body.appendChild(file2);
+            file2.click();
+            document.body.removeChild(file2);
+        }
+
+    </script>
+    <script>
+        function button() {
+            window.location.href = "output/registros_add.php";
+        }
+    </script>
+
+    <!-- Modal -->
+    <div id="modalInfoCongreso"
+        class="modal fixed inset-0 bg-gray-500 bg-opacity-75 hidden items-center justify-center overflow-y-auto">
+        <div
+            class="modal-content bg-white rounded-lg w-full max-w-4xl p-6 relative shadow-lg max-h-[90vh] overflow-y-auto">
+            <button id="closeModal"
+                class="absolute top-2 right-2 text-gray-600 text-2xl hover:text-gray-800">&times;</button>
+            <h2 class="text-2xl font-semibold text-center text-green-700 mb-4">IV Congreso Internacional de Ciencia,
+                Tecnología y Desarrollo Social y
+                Encuentro Nacional de semilleros de investigación en escenarios formativos y productivos.
+            </h2>
+
+            <h3 class="text-2xl font-semibold text-center text-green-700 mb-3">
+                "Sena construye conocimiento”.
+            </h3>
+
+            <h4 class="text-2xl font-semibold text-center text-green-700 mb-2">
+                SENA Regional Atlántico.
+            </h4>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <caption class="bg-green-600 text-white px-4 py-2 text-center">FICHA</caption>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">CONTEXTO</td>
+                            <td class="border px-4 py-2">
+                                El IV Congreso Internacional de Ciencia, Tecnología y Desarrollo Social y V Encuentro
+                                Nacional de semilleros de investigación en escenarios formativos y productivos. "Sena
+                                construye conocimiento”.
+                                <br><br>
+                                Objetivo general<br><br>
+                                Crear espacios de Interacción en torno al Desarrollo Científico, tecnológico y social en
+                                escenarios formativos, productivos y las dinámicas investigativas del SENA Regional
+                                Atlántico de Colombia.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">LÍNEAS</td>
+                            <td class="border px-4 py-2">
+                                <ul>
+                                    <li>Agro y Medioambiente</li>
+                                    <li>Tecnologías aplicadas al Sector Agro</li>
+                                    <li>Energías Renovables</li>
+                                    <li>Economía Popular</li>
+                                    <li>Innovación y Gestión Empresarial</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">CENTROS SENA PARTICIPANTES</td>
+                            <td class="border px-4 py-2">
+                                <ul>
+                                    <li>Centro para el Desarrollo Agroecológico y Agroindustrial</li>
+                                    <li>Centro Colombo Alemán</li>
+                                    <li>Centro de Comercio y Servicios</li>
+                                    <li>Centro Industrial y de Aviación</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <!-- hero section -->
     <section id="home" class="section-hero bg-[#6cb6304d] relative"
-        style="background-image: url(assets/img/home/woman-tablet-and-greenhouse-for-plants-inspection-2023-11-27-05-30-26-utc.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat; max-width: 100%; box-sizing: border-box; ">
+        style="background-image: url(assets/img/home/CopiadeFLYER-AGROJAM-EDI.png); background-size: cover;background-position: center center; background-repeat: no-repeat; max-width: 100%; box-sizing: border-box; ">
         <div
             class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] py-[80px] px-4">
             <div class="w-full 2xl:h-[90vh] lg:h-[80vh] h-[70vh] max-[320px]:h-[50vh] flex items-center px-2 2xl:max-w-lg xl:max-w-lg lg:max-w-lg lg:w-1/2 lg:mx-0 md:max-w-lg md:w-1/2 md:mx-0 2xl:w-1/2 xl:w-1/2 sm:items-center"
@@ -198,7 +250,7 @@ Copyright 2023
                     </div>
                     <!-- End Contador -->
 
-                   <!--  <a style="display: flex; justify-content: center; align-items: center" href="#">
+                    <!--  <a style="display: flex; justify-content: center; align-items: center" href="#">
                         <button type="button"
                             class="text-white mt-8 bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 2xl:block xl:block lg:block">
                             Registrate
@@ -216,7 +268,7 @@ Copyright 2023
                     <h1
                         class="text-[#6CB630] 2xl:text-[60px] xl:text-[55px] lg:text-[50px] md:text-[45px] text-[40px] font-bold">
                         FECHA DEL<span style="color:#064E00"> EVENTO</span> <i class="fa-regular fa-calendar"></i></h1>
-                    <p class="pt-2 text-[#064E00] text-base font-weight-700 font-size: 32px;" >
+                    <p class="pt-2 text-[#064E00] text-base font-weight-700 font-size: 32px;">
                         <span style="font-size: 22px; " class="text-[#064E00] text-[18px] font-bold"> “Prepárate
                             para vivir este encuentro <span style="color: #6CB630;">30</span>
                             y <span style="color: #6CB630;">31</span> de octubre”<br>
@@ -249,7 +301,7 @@ Copyright 2023
                             class="mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
                             Somos el puente entre el <span class="text-[#6CB630]">Agro y la Tecnología</span></h2>
                     </div>
-                    <p class="text-[16px] text-[#777] mb-[30px]" style="text-align: justify;">
+                    <p class="text-[16px] mb-[30px]" style="text-align: justify;">
                         En el sector agrícola colombiano, se evidencia una marcada desconexión entre los actores del
                         agro y las instituciones del Sistema de Ciencia,
                         Tecnología e Innovación (CTeI). Esta brecha ha resultado en un escaso entendimiento de las
@@ -276,45 +328,43 @@ Copyright 2023
     </div>
     <style>
         .slide img {
-            height: 100px;
-            width: 130px;
+            height: auto;
+            width: auto;
         }
     </style>
     <div class="slider">
         <div class="slide-track">
+
             <div class="slide">
-                <a href="">
-                    <img style="height: 50px; width: 75px" class="filtro" src="assets/img/patrocinadores/P1.png" alt="" />
+                <a>
+                    <img style="height: 50px;" src="assets/img/patrocinadores/P1.png" alt="" />
                 </a>
             </div>
             <div class="slide">
-                <a href="">
-                    <img class="filtro" src="assets/img/patrocinadores/P2.png" height="100%" width="100%"
-                        alt="" />
+                <a>
+                    <img style="padding-right: 70px;" src="assets/img/patrocinadores/P2.png" alt="" />
                 </a>
             </div>
             <div class="slide">
-                <a href="">
-                    <img class="filtro" src="assets/img/patrocinadores/P3.png" height="100%" width="100%" alt="" />
+                <a>
+                    <img src="assets/img/patrocinadores/P3.png" alt="" />
                 </a>
             </div>
             <div class="slide">
-                <a href="">
-                    <img style="height: 50px; width: 75px" class="filtro" src="assets/img/patrocinadores/P1.png" height="100%" width="100%" alt="" />
+                <a>
+                    <img style="height: 50px;" src="assets/img/patrocinadores/P1.png" alt="" />
                 </a>
             </div>
             <div class="slide">
-                <a href="">
-                    <img class="filtro" src="assets/img/patrocinadores/P2.png" height="100%" width="100%"
-                        alt="" />
+                <a>
+                    <img style="padding-right: 70px;" src="assets/img/patrocinadores/P2.png" alt="" />
                 </a>
             </div>
             <div class="slide">
-                <a href="">
-                    <img class="filtro" src="assets/img/patrocinadores/P3.png" height="100%" width="100%" alt="" />
+                <a>
+                    <img src="assets/img/patrocinadores/P3.png" alt="" />
                 </a>
             </div>
-            
 
         </div>
     </div>
@@ -359,7 +409,7 @@ Copyright 2023
                 <div class="transition-all" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
                     <div class="mb-8">
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                            ¿Sede del <span class="text-[#6CB630]">evento?</span>
+                            Sede del <span class="text-[#6CB630]">evento</span>
                         </h2>
                     </div>
                     <p class="text-xl sm:text-2xl text-gray-700 mb-8">
@@ -370,28 +420,17 @@ Copyright 2023
                             class="w-full max-w-md mx-auto lg:mx-0 rounded-lg">
                     </div>
                 </div>
-                <div class="transition-all h-[400px] sm:h-[500px] lg:h-full" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                <div class="transition-all h-[400px] sm:h-[500px] lg:h-full" data-aos="fade-up" data-aos-duration="2000"
+                    data-aos-delay="300">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5837127294594!2d-74.79594850866478!3d10.994761161237088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d083ebdf1eb%3A0xac45c4bfd5e69dc0!2sUniversidad%20De%20la%20Costa!5e0!3m2!1ses!2sco!4v1724362828338!5m2!1ses!2sco"
-                        class="w-full h-full"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
         </div>
     </section>
-    <style>
-        .transition-all {
-            transition: all 0.3s ease-in-out;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
 
     <!-- Agenda -->
     <section id="agenda" class="section-experience bg-[#6cb6304d] relative">
@@ -409,21 +448,18 @@ Copyright 2023
 
             <div
                 class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6 relative">
-                <!--  <img src="assets/img/shape/shape-8.png" alt="shape-8" class="absolute w-12 -top-10 right-10"> -->
-                <!-- <div class="absolute -top-10 left-10 h-12 w-12 bg-[#3F9600] rounded-full"></div> -->
-                <button class="btn-derecho" onclick="toggleText(1)">AGENDA CONGRESO</button>
-                <button class="btn-izquierdo" onclick="toggleText(2)">AGENDA AGROJAM</button>
                 <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px]">
+
+                    <!-- Miércoles de Agrojam  -->
 
                     <div class="transition-all justify-start items-start">
                         <h2 class="text-[20px] font-bold leading-[24px] heading" style="text-align: center;">AGENDA
-                            CONGRESO
+                            AGROJAM
                         </h2>
                         <h2 id="fecha" class="text-[20px] font-bold leading-[24px]"
                             style="text-align: center; font-size: 17px">
                             Miércoles 30 de Octubre</h2>
                         <div class="border-l-2 pl-6" style="border-color:#064E00;">
-
                             <div id="agendaDetails">
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
                                     data-aos-duration="2000" data-aos-delay="400">
@@ -433,268 +469,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        7:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Registro</span>
-                                    </h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Introducción al evento y objetivos por parte del presentador. <br></li>
-                                        <li>Discurso inaugural de la directora, destacando la importancia de Jam
-                                            AgroTIC y la Presentación de datos relevantes sobre la situación actual del
-                                            sector
-                                            agro.</li>
-
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="400">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        08:30 - 09:00 am <span class="ml-[15px] text-[#999] text-[14px]">- Palabras de
-                                            Apertura</span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Ponencia: La tecnología como fuente importante en el desarrollo de la
-                                            producción primaria.</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="400">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        09:00 – 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Instalación Panel: Desafíos y apuestas de País para el Agro, Energía y
-                                            Economía
-                                            popular</span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Pausa para café y oportunidad para intercambiar ideas.</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="600">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 12, 2010 - 2013</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        10:30 - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
-                                            Internacional: Agricultura y cambio Climático</span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Inicio de los solucionadores para creación de sus proyectos para el
-                                            sector agro y TIC.</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        11:30 - 12:15 pm <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
-                                            Nacional1: Energías Renovables </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        12:15 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]"> Almuerzo libre
-                                            audiencia - Almuerzo privado con invitados </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        02:00 - 02:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias1-2-3
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        02:30 - 03:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias4-5-6
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        03:00 - 03:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias7-8-9
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        03:30 - 04:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias10-11-12
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        04:00 - 04:30 pm <span class="ml-[15px] text-[#999] text-[14px]">- Coffe
-                                            Break-Snack
-                                            audiencia
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        04:30 - 05:30 pm / 05:30 - 06:00 pm <span
-                                            class="ml-[15px] text-[#999] text-[14px]">- PRESENTACION DE
-                                            POSTERS
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        06:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Cierre de la jornada
-                                            (primer día).
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div id="agendaDetails3" style="display: none;">
-                                <!-- Agrojam -->
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="400">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         07:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
                                             Registro</span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Continuación del evento y objetivos por parte del presentador. <br></li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -705,14 +485,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         08:30 - 09:00 am <span class="ml-[15px] text-[#999] text-[14px]">- Palabras de
-                                            Apertura</span></h4>
+                                            Apertura</span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Ponencia: La tecnología como fuente importante en el desarrollo de la
-                                            producción primaria.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -723,7 +501,6 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         09:00 - 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
@@ -731,7 +508,6 @@ Copyright 2023
                                             Economía
                                             popular</span></h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Pausa para café y oportunidad para intercambiar ideas.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -742,14 +518,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 12, 2010 - 2013</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         10:30 - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
-                                            Internacional: Agricultura y cambio Climático</span></h4>
+                                            Internacional: Agricultura y cambio Climático</span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Continuación de los solucionadores para creación de sus proyectos para el
-                                            sector agro y TIC.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -760,15 +534,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         11:30 - 12:15 pm<span class="ml-[15px] text-[#999] text-[14px]">- Conferencia
-                                            Nacional1: Energías Renovables </span></h4>
+                                            Nacional1: Energías Renovables </span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -779,15 +550,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         12:15 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">Almuerzo libre
-                                            audiencia - Almuerzo privado con invitados </span></h4>
+                                            audiencia - Almuerzo privado con invitados </span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -798,16 +566,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         02:00 - 02:30 pm / 02:30 - 03:00 pm
                                         <span class="ml-[15px] text-[#999] text-[14px]">- Taller de Creatividad </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -818,16 +582,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         03:00 - 03:30 pm / 03:30 - 04:00 pm <span
                                             class="ml-[15px] text-[#999] text-[14px]">-
                                             Taller de Innovación </span></h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -838,16 +598,13 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         04:00 - 04:30 pm <span class="ml-[15px] text-[#999] text-[14px]">- Coffe
                                             Break-Snack
-                                            audiencia</span></h4>
+                                            audiencia</span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -858,16 +615,13 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         04:30 - 05:30 pm / 05:30 - 06:00 pm <span
                                             class="ml-[15px] text-[#999] text-[14px]">-
-                                            Taller de prototipado </span></h4>
+                                            Taller de prototipado </span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -878,15 +632,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         06:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Cierre de la jornada
-                                            (primer día). </span></h4>
+                                            (primer día). </span>
+                                    </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                             </div>
@@ -894,21 +645,17 @@ Copyright 2023
                     </div>
 
 
-                    <!-- Agenda de Agrojam  -->
+                    <!-- Jueves de Agrojam  -->
 
                     <div class="transition-all justify-start items-start" data-aos="fade-up" data-aos-duration="2000"
                         data-aos-delay="300">
                         <h2 class="text-[20px] font-bold leading-[24px] heading1" style="text-align: center;">AGENDA
-                            CONGRESO
+                            AGROJAM
                         </h2>
                         <h2 id="fecha2" class="text-[20px] font-bold leading-[24px]"
                             style="text-align: center; font-size: 17px">
                             jueves 31 de Octubre</h2>
                         <div class="border-l-2 pl-6" style="border-color: #064E00; ">
-
-                            <!-- Jueves Congreso -->
-
-
                             <div id="agendaDetails1">
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
                                     data-aos-duration="2000" data-aos-delay="800">
@@ -918,211 +665,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        07:30 pm - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Registro
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        08:30 pm - 09:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Conferencia
-                                            Nacional 2
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        09:30 pm - 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Conferencia
-                                            Nacional 3
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        10:30 pm - 11:00 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias13-14-15
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Ponencias16-17-18
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        11:00 pm - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias19-20-21
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Ponencias22-23-24
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        11:30 pm - 12:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
-                                            Ponencias25-26
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Muestra Folclórica y
-                                            Cierre del Evento
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
-                                    <h4
-                                        class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
-                                        12:00 pm - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Almuerzo
-                                            libre
-                                        </span></h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
-                                            aprender a volar? - MaxDrone</li>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Jueves de Agrojam  -->
-
-                            <!--  -->
-                            <div id="agendaDetails4" style="display: none;">
-                                <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
-                                    data-aos-duration="2000" data-aos-delay="800">
-                                    <div class="absolute top-0 bottom-0 -left-6 w-4">
-                                        <span
-                                            class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
-                                        <span
-                                            class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
-                                    </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         07:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">- Registro
                                         </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -1133,7 +681,6 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         08:30 - 09:30 am / 09:30 - 10:30 am <span
@@ -1141,9 +688,6 @@ Copyright 2023
                                             Bootcamp </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -1154,16 +698,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         10:30 - 11:00 am / 11:00 - 11:30 am / 11:30 - 12:00 pm <span
                                             class="ml-[15px] text-[#999] text-[14px]">- Evaluación y Premiación </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
                                     </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
@@ -1174,17 +714,11 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Muestra Folclórica y
-                                            Cierre del Evento </span>
+                                            Clausura </span>
                                     </h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
-                                    </p>
                                 </div>
                                 <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
                                     data-aos-duration="2000" data-aos-delay="800">
@@ -1194,18 +728,12 @@ Copyright 2023
                                         <span
                                             class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
                                     </div>
-                                    <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         12:00 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Almuerzo
                                             libre
                                         </span>
                                     </h4>
-                                    <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
-                                        <li>Sesión de feedback y evaluación con los participantes.</li>
-                                        <li>Palabras finales por parte de la directora.</li>
-                                        <li>Agradecimientos, entrega de premios y cierre oficial del día.</li>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1213,6 +741,510 @@ Copyright 2023
                 </div>
             </div>
     </section>
+
+    <!-- Modal Agenda -->
+    <div id="agendaModal"
+        class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white p-6 rounded-lg w-[80%] max-h-[90%] overflow-y-auto">
+            <span class="close-modal absolute top-3 right-3 text-3xl cursor-pointer">&times;</span>
+            <section id="agenda" class="section-experience bg-[#6cb6304d] relative">
+                <div class="relative pt-[60px]">
+                    <img src="assets/img/shape/bg-shape.png" alt="bg-shape"
+                        class="absolute top-0 left-0 right-0 w-full bg-center bg-cover">
+                </div>
+                <div class="2xl:pb-[80px] pb-[70px] 2xl:pt-[80px] md:pt-[70px] pt-[20px]">
+                    <div class="banner text-center mb-[30px]" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="300">
+                        <span class="text-[14px] text-[#777]">Que encontraras en el AgroJam</span>
+                        <h2
+                            class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
+                            Agenda <span class="text-[#6CB630]"> Congreso</span></h2>
+                    </div>
+                    <div
+                        class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6 relative">
+                        <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px]">
+                            <div class="transition-all justify-start items-start">
+                                <h2 class="text-[20px] font-bold leading-[24px] heading" style="text-align: center;">
+                                    AGENDA
+                                    CONGRESO
+                                </h2>
+                                <h2 id="fecha" class="text-[20px] font-bold leading-[24px]"
+                                    style="text-align: center; font-size: 17px">
+                                    Miércoles 30 de Octubre</h2>
+                                <div id="agendaDetails">
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="400">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            7:30 - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Registro del evento</span>
+                                        </h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Introducción al evento y objetivos por parte del presentador. <br></li>
+                                            <li>Discurso inaugural de la directora, destacando la importancia de Jam
+                                                AgroTIC y la Presentación de datos relevantes sobre la situación actual del
+                                                sector
+                                                agro.</li> -->
+
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="400">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            08:30 - 09:00 am <span class="ml-[15px] text-[#999] text-[14px]">- Palabras
+                                                de
+                                                Apertura</span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Ponencia: La tecnología como fuente importante en el desarrollo de la
+                                                producción primaria.</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="400">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 15, 2013 - 2016</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            09:00 – 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Instalación Panel: Desafíos y apuestas de País para el Agro, Energía y
+                                                Economía
+                                                popular</span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Pausa para café y oportunidad para intercambiar ideas.</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="600">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 12, 2010 - 2013</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            10:30 - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Conferencia
+                                                Internacional: Agricultura y cambio Climático</span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Inicio de los solucionadores para creación de sus proyectos para el
+                                                sector agro y TIC.</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            11:30 - 12:15 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Conferencia
+                                                Nacional1: Energías Renovables </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            12:15 - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]"> Almuerzo
+                                                libre
+                                                audiencia - Almuerzo privado con invitados </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            02:00 - 02:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Ponencias1-2-3
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            02:30 - 03:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Ponencias4-5-6
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            03:00 - 03:30 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Ponencias7-8-9
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            03:30 - 04:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                Ponencias10-11-12
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            04:00 - 04:30 pm <span class="ml-[15px] text-[#999] text-[14px]">- Coffe
+                                                Break-Snack
+                                                audiencia
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            04:30 - 05:30 pm / 05:30 - 06:00 pm <span
+                                                class="ml-[15px] text-[#999] text-[14px]">- PRESENTACION DE
+                                                POSTERS
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                    <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="800">
+                                        <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                            <span
+                                                class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                            <span
+                                                class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                        </div>
+                                        <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                        <h4
+                                            class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                            06:00 pm <span class="ml-[15px] text-[#999] text-[14px]">- Cierre de la
+                                                jornada
+                                                (primer día).
+                                            </span></h4>
+                                        <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                aprender a volar? - MaxDrone</li> -->
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="transition-all 2xl:mt-0 lg:mt-0 xl:mt-0 mt-[15px] justify-start items-start"
+                                data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                                <h2 class="text-[20px] font-bold leading-[24px] heading1" style="text-align: center;">
+                                    AGENDA
+                                    CONGRESO
+                                </h2>
+                                <h2 id="fecha2" class="text-[20px] font-bold leading-[24px]"
+                                    style="text-align: center; font-size: 17px">
+                                    jueves 31 de Octubre</h2>
+                                <div class="border-l-2 pl-6" style="border-color: #064E00; ">
+
+                                    <!-- Jueves Congreso -->
+
+
+                                    <div id="agendaDetails1">
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                07:30 pm - 08:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Registro
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                08:30 pm - 09:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Conferencia
+                                                    Nacional 2
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                09:30 pm - 10:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Conferencia
+                                                    Nacional 3
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                10:30 pm - 11:00 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Ponencias13-14-15
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                Terraza <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Ponencias16-17-18
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                11:00 pm - 11:30 am <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Ponencias19-20-21
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                Terraza <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Ponencias22-23-24
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                11:30 pm - 12:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Ponencias25-26
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <!-- <span class="text-[#777] text-[12px] font-medium">June 1, 2009 - 2010</span> -->
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                Terraza <span class="ml-[15px] text-[#999] text-[14px]">- Muestra
+                                                    Folclórica y
+                                                    Clausura
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                                <!-- <li>Monetiza en múltiples industrias con el mundo de los drones ¿Quién quiere
+                                                    aprender a volar? - MaxDrone</li> -->
+                                            </p>
+                                        </div>
+                                        <div class="p-[30px] bg-white rounded-3xl mt-8 relative" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="800">
+                                            <div class="absolute top-0 bottom-0 -left-6 w-4">
+                                                <span
+                                                    class="w-4 h-4 border-2 border-[#6CB630] rounded-full block bg-[#f6f8ff] absolute top-28 -left-2.5"></span>
+                                                <span
+                                                    class="w-5 border border-[#6CB630] block bg-[#f6f8ff] absolute top-28 my-1.5 left-1.5"></span>
+                                            </div>
+                                            <h4
+                                                class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
+                                                12:00 pm - 02:00 pm <span class="ml-[15px] text-[#999] text-[14px]">-
+                                                    Almuerzo
+                                                    libre
+                                                </span></h4>
+                                            <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        </div>
+    </div>
 
     <!-- Portafolio -->
     <!--    <div class="banner text-center mb-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
@@ -1477,8 +1509,14 @@ Copyright 2023
                 </div> -->
             </div>
         </div>
-        <div class="2xl:border-b 2xl:pt-24 lg:border-b lg:pt-12 pt-0 flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-6"
-            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"></div>
+        <div class="2xl:border-b lg:border-b  pt-0 flex justify-center items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-6"
+            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+            <a href="Términos-y-Condiciones-de-participación-de-los-Retos.pdf" download="Términos-y-condiciones"
+                class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 mb-5"
+                id="submitBtn">
+                Términos y Condiciones
+            </a>
+        </div>
     </section>
 
 
@@ -1606,40 +1644,49 @@ Copyright 2023
                 Colócate en <span class="text-[#6CB630]">contacto</span></h2>
         </div>
         <form method="post" action="correo.php" autocomplete="off" id="contactForm">
-        <!-- Formulario de Contacto -->
-        
-        <!-- FIN de Contacto -->
+            <!-- Formulario de Contacto -->
 
-            <div class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6">
+            <!-- FIN de Contacto -->
+
+            <div
+                class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6">
                 <div class="m-b-minus-24px w-full">
-                    <div class="grid lg:grid-cols-2 gap-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <div class="grid lg:grid-cols-2 gap-[30px]" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="300">
                         <div class="mb-0">
                             <div class="">
                                 <input type="text"
-                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="name" id="fname" placeholder="Nombre">
-                            </div> 
+                            </div>
                             <div class="pt-2">
                                 <input type="email"
-                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="email" id="email" placeholder="Correo Electrónico">
                             </div>
                             <div class="pt-2">
                                 <input type="tel"
-                                    class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="telefono" id="phone" placeholder="Telefono">
                             </div>
                         </div>
                         <div class="mb-0">
                             <div class="">
-                                <textarea class="appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
-                                name="mensaje" id="exampleFormControlTextarea1" rows="9" placeholder="Mensaje"></textarea>
+                                <textarea
+                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    name="mensaje" id="exampleFormControlTextarea1" rows="9"
+                                    placeholder="Mensaje"></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="grid lg:grid-cols-3 gap-[30px]" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+
+                    <style>
+
+                    </style>
+                    <div class="grid lg:grid-cols-3 gap-[30px]" data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-delay="300">
                         <div class="">
-                            
+
                         </div>
                         <div class="" style="text-align:center; vertical-align: middle;">
                             <button type="submit"
@@ -1648,8 +1695,7 @@ Copyright 2023
                                 Enviar
                             </button>
                             <script>
-                                document.getElementById("contactForm").addEventListener("submit", function (event) 
-                                {
+                                document.getElementById("contactForm").addEventListener("submit", function (event) {
                                     var submitBtn = document.getElementById("submitBtn");
                                     submitBtn.disabled = true;
                                     submitBtn.textContent = "Enviando...";
@@ -1657,7 +1703,7 @@ Copyright 2023
                             </script>
                         </div>
                         <div class="">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -1706,60 +1752,46 @@ Copyright 2023
     <script src="assets/js/index.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.min.js"></script>
+
     <script>
-        function toggleText(tp) {
-            var elements = {
-                agendaDetails: document.getElementById("agendaDetails"),
-                agendaDetails1: document.getElementById("agendaDetails1"),
-                agendaDetails3: document.getElementById("agendaDetails3"),
-                agendaDetails4: document.getElementById("agendaDetails4"),
-            };
+        // Get elements for the first modal (Info Congreso)
+        const modalInfoCongreso = document.getElementById('modalInfoCongreso');
+        const openModalInfoCongreso = document.getElementById('openModal');
+        const closeModalInfoCongreso = document.getElementById('closeModal');
 
-            var heading = document.querySelector(".heading");
-            var heading1 = document.querySelector(".heading1");
-            var fecha = document.getElementById("fecha");
-            var fecha2 = document.getElementById("fecha2");
+        // Get elements for the second modal (Agenda Congreso)
+        const modalAgendaCongreso = document.getElementById("agendaModal");
+        const openModalAgendaCongreso = document.getElementById("agendaCongreso");
+        const closeModalAgendaCongreso = document.querySelector("#agendaModal .close-modal");
 
-            // Hide all elements initially
-            Object.values(elements).forEach(el => el.style.display = "none");
-
-            // Reset text
-            heading.innerHTML = "Selecciona una agenda";
-            fecha.innerHTML = "";
-            fecha2.innerHTML = "";
-
-            if (tp === 1) {
-                elements.agendaDetails.style.display = "block";
-                elements.agendaDetails1.style.display = "block";
-                heading.innerHTML = "AGENDA CONGRESO";
-                heading1.innerHTML = "AGENDA CONGRESO";
-                fecha2.innerHTML = "Jueves 31 de Octubre";
-                fecha.innerHTML = "Miércoles 30 de Octubre";
-            } else if (tp === 2) {
-                elements.agendaDetails3.style.display = "block";
-                elements.agendaDetails4.style.display = "block";
-                heading.innerHTML = "AGENDA AGROJAM";
-                heading1.innerHTML = "AGENDA AGROJAM";
-                fecha2.innerHTML = "Jueves 31 de Octubre";
-                fecha.innerHTML = "Miércoles 30 de Octubre";
-            }
+        // Function to open a modal
+        function openModal(modal) {
+            modal.classList.add('active');
+            modal.classList.remove('hidden');
         }
 
-    </script>
+        // Function to close a modal
+        function closeModal(modal) {
+            modal.classList.remove('active');
+            modal.classList.add('hidden');
+        }
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.btn-izquierdo, .btn-derecho');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remover la clase 'selected' de todos los botones
-                    buttons.forEach(btn => btn.classList.remove('selected'));
-                    
-                    // Agregar la clase 'selected' al botón clickeado
-                    this.classList.add('selected');
-                });
-            });
+        // Event listeners for Info Congreso modal
+        openModalInfoCongreso.addEventListener('click', () => openModal(modalInfoCongreso));
+        closeModalInfoCongreso.addEventListener('click', () => closeModal(modalInfoCongreso));
+
+        // Event listeners for Agenda Congreso modal
+        openModalAgendaCongreso.addEventListener('click', () => openModal(modalAgendaCongreso));
+        closeModalAgendaCongreso.addEventListener('click', () => closeModal(modalAgendaCongreso));
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modalInfoCongreso) {
+                closeModal(modalInfoCongreso);
+            }
+            if (event.target === modalAgendaCongreso) {
+                closeModal(modalAgendaCongreso);
+            }
         });
     </script>
 

@@ -806,7 +806,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos^="fade"][data-aos^="fade"].aos-animate {
   opacity: 1;
   transform: translateZ(0);
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 [data-aos="fade-up"] {
   transform: translate3d(0, 100px, 0);

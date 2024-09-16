@@ -388,6 +388,46 @@ class Chart
 			return true;
 		if("registros" == $this->chrt_array['tables'][0])
 			return true;
+		if("usuario" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("rol" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("evaluador" == $this->chrt_array['tables'][0])
+			return true;
+		if("preguntas" == $this->chrt_array['tables'][0])
+			return true;
+		if("calificacion" == $this->chrt_array['tables'][0])
+			return true;
+		if("resultado" == $this->chrt_array['tables'][0])
+			return true;
+		if("resultado" == $this->chrt_array['tables'][0])
+			return true;
+		if("resultado" == $this->chrt_array['tables'][0])
+			return true;
+		if("resultado" == $this->chrt_array['tables'][0])
+			return true;
+		if("resultado" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
+		if("registros" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

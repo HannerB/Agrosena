@@ -2,15 +2,15 @@
 $tdataregistros = array();
 $tdataregistros[".searchableFields"] = array();
 $tdataregistros[".ShortName"] = "registros";
-$tdataregistros[".OwnerID"] = "";
+$tdataregistros[".OwnerID"] = "id_registro";
 $tdataregistros[".OriginalTable"] = "registros";
 
 
-$tdataregistros[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"search\":[\"search\"]}" );
+$tdataregistros[".pagesByType"] = my_json_decode( "{\"add\":[\"add\",\"add1\",\"add2\",\"add3\"],\"list\":[\"list\",\"list1\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataregistros[".originalPagesByType"] = $tdataregistros[".pagesByType"];
-$tdataregistros[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"search\":[\"search\"]}" ) );
+$tdataregistros[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\",\"add1\",\"add2\",\"add3\"],\"list\":[\"list\",\"list1\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataregistros[".originalPages"] = $tdataregistros[".pages"];
-$tdataregistros[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"search\":\"search\"}" );
+$tdataregistros[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"list\":\"list\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataregistros[".originalDefaultPages"] = $tdataregistros[".defaultPages"];
 
 //	field labels
@@ -34,10 +34,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsregistros["Spanish"]["edad"] = "Edad";
 	$fieldToolTipsregistros["Spanish"]["edad"] = "";
 	$placeHoldersregistros["Spanish"]["edad"] = "";
-	$fieldLabelsregistros["Spanish"]["tipo_doc"] = "Tipo de Documento";
+	$fieldLabelsregistros["Spanish"]["tipo_doc"] = "Identificado con";
 	$fieldToolTipsregistros["Spanish"]["tipo_doc"] = "";
 	$placeHoldersregistros["Spanish"]["tipo_doc"] = "";
-	$fieldLabelsregistros["Spanish"]["num_doc"] = "Numero de Documento";
+	$fieldLabelsregistros["Spanish"]["num_doc"] = "Telefono";
 	$fieldToolTipsregistros["Spanish"]["num_doc"] = "";
 	$placeHoldersregistros["Spanish"]["num_doc"] = "";
 	$fieldLabelsregistros["Spanish"]["correo"] = "Correo";
@@ -46,7 +46,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsregistros["Spanish"]["celular"] = "Celular";
 	$fieldToolTipsregistros["Spanish"]["celular"] = "";
 	$placeHoldersregistros["Spanish"]["celular"] = "";
-	$fieldLabelsregistros["Spanish"]["institucion"] = "Institución de Educación superior a la que pertenece (IES)";
+	$fieldLabelsregistros["Spanish"]["institucion"] = "Institución de Formacion a la que pertenece";
 	$fieldToolTipsregistros["Spanish"]["institucion"] = "";
 	$placeHoldersregistros["Spanish"]["institucion"] = "";
 	$fieldLabelsregistros["Spanish"]["centro"] = "Centro de Formación de la Regional Atlántico Sena al que pertenece";
@@ -113,7 +113,7 @@ if(mlang_getcurrentlang()=="Spanish")
 $tdataregistros[".shortTableName"] = "registros";
 $tdataregistros[".nSecOptions"] = 0;
 
-$tdataregistros[".mainTableOwnerID"] = "";
+$tdataregistros[".mainTableOwnerID"] = "id_registro";
 $tdataregistros[".entityType"] = 0;
 $tdataregistros[".connId"] = "jovenes_gober_at_107_180_57_13";
 
@@ -588,7 +588,8 @@ $tdataregistros[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "id_registro";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1188,7 +1189,7 @@ $tdataregistros[".hideMobileList"] = array();
 	$fdata["GoodName"] = "celular";
 	$fdata["ownerTable"] = "registros";
 	$fdata["Label"] = GetFieldLabel("registros","celular");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1673,7 +1674,7 @@ $tdataregistros[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1683,24 +1684,6 @@ $tdataregistros[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "Participante al Jam";
-	$edata["LookupValues"][] = "Ponencia";
-	$edata["LookupValues"][] = "Poster";
-	$edata["LookupValues"][] = "Asistente";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1724,8 +1707,7 @@ $tdataregistros[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+							
 	
 //	End validation
 

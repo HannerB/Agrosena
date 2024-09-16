@@ -1024,7 +1024,671 @@ class Security
 
 	public static function _staticRestrictedPages( $table ) {
 		$group = Security::getUserGroup();
+		if( $group == "<Guest>" )	{
+			if( $table == "Resultados" )
+			{
+				$ret = array();
+				$ret[ "dashboard" ] = true;
+				return $ret;
+			}
+			if( $table == "calificacion" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "criterio" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "equipos" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "evaluador" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "integrantes" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "preguntas" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_asistente" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_participantes" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_ponentes" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_poster" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_vista" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto1" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto2" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto3" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado_grupos" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "retos" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "rol" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "usuario" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			return array();
+		}
+		if( $group == "admin" )	{
+			if( $table == "registrosParticipantes" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registrosPonencias" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registrosPoster" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_descargar" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "usuario" )
+			{
+				$ret = array();
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			return array();
+		}
+		if( $group == "evaluador" )	{
+			if( $table == "<global>" )
+			{
+				$ret = array();
+				$ret[ "menu" ] = true;
+				return $ret;
+			}
+			if( $table == "calificacion" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "criterio" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				return $ret;
+			}
+			if( $table == "equipos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				return $ret;
+			}
+			if( $table == "evaluador" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "preguntas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "registros" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registrosParticipantes" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registrosPonencias" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registrosPoster" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_asistente" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_descargar" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_participantes" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_ponentes" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_poster" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				return $ret;
+			}
+			if( $table == "registros_vista" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto1" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto2" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado reto3" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "resultado_grupos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "retos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "rol" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "usuario" )
+			{
+				$ret = array();
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			return array();
+		}
 		//	default permissions
+		if( $table == "<global>" )
+		{
+			$ret = array();
+			$ret[ "menu" ] = true;
+			return $ret;
+		}
+		if( $table == "Resultados" )
+		{
+			$ret = array();
+			$ret[ "dashboard" ] = true;
+			return $ret;
+		}
+		if( $table == "calificacion" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "criterio" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "equipos" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "evaluador" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "integrantes" )
+		{
+			$ret = array();
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "preguntas" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registrosParticipantes" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registrosPonencias" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registrosPoster" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_asistente" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_descargar" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_participantes" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_ponentes" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_poster" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "registros_vista" )
+		{
+			$ret = array();
+			$ret[ "list" ] = true;
+			$ret[ "list1" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "resultado" )
+		{
+			$ret = array();
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "resultado reto1" )
+		{
+			$ret = array();
+			$ret[ "chart" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "resultado reto2" )
+		{
+			$ret = array();
+			$ret[ "chart" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "resultado reto3" )
+		{
+			$ret = array();
+			$ret[ "chart" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "resultado_grupos" )
+		{
+			$ret = array();
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "retos" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			$ret[ "view" ] = true;
+			return $ret;
+		}
+		if( $table == "rol" )
+		{
+			$ret = array();
+			$ret[ "export" ] = true;
+			$ret[ "import" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "print" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
+		if( $table == "usuario" )
+		{
+			$ret = array();
+			$ret[ "add" ] = true;
+			$ret[ "edit" ] = true;
+			$ret[ "list" ] = true;
+			$ret[ "search" ] = true;
+			return $ret;
+		}
 		return array();
 	}
 
@@ -1843,6 +2507,11 @@ class Security
 	}
 
 	public static function guestHasStaticPermissions() {
+																								return true;
+												return true;
+																																																																				return true;
+								return true;
+								return true;
 		return false;
 	}
 

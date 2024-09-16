@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -41,8 +40,6 @@
 	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
 	class=" r-ori-vert			col-md-12
 	">
-	 
-		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel usuario edit}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -67,7 +64,7 @@
 			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
 	{END message_back_button}
 {BEGIN message_view_page_button}
-		<a class="btn btn-sm btn-default" href="usuario_view.php?{$editlink}" {$view_page_button_attrs}>Ver</a>
+		<a class="btn btn-sm btn-default" href="" {$view_page_button_attrs}>Ver</a>
 {END message_view_page_button}
 </div>
 </div>
@@ -107,54 +104,12 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN nomusuario_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_nomusuario}  r-vertical-field" 
-	data-signal-error-for="nomusuario{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="nomusuario" data-fieldname="nomusuario" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_nomusuario}">
-		{BEGIN nomusuario_label}{$label usuario nomusuario }{END nomusuario_label}
-	</label>
-	<div class="r-edit-field">
-		{$nomusuario_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="nomusuario" {$tooltipAttr usuario nomusuario } >
-		<div class="text-muted" >
-		{$tooltip usuario nomusuario }		</div>
-	</div>
-</div>
-
-
-{END nomusuario_fieldblock}
-											
-{BEGIN contrase_a_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_contrase_a}  r-vertical-field" 
-	data-signal-error-for="contrase_a{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="contrase_a" data-fieldname="contraseña" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_contrase_a}">
-		{BEGIN contrase_a_label}{$label usuario contrase_a }{END contrase_a_label}
-	</label>
-	<div class="r-edit-field">
-		{$contrase_a_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="contrase_a" {$tooltipAttr usuario contrase_a } >
-		<div class="text-muted" >
-		{$tooltip usuario contrase_a }		</div>
-	</div>
-</div>
-
-
-{END contrase_a_fieldblock}
-											
 {BEGIN rol_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_rol}  r-vertical-field" 
 	data-signal-error-for="rol{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="rol" data-fieldname="rol" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="rol" data-fieldname="rol" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_rol}">
 		{BEGIN rol_label}{$label usuario rol }{END rol_label}
@@ -170,26 +125,47 @@
 
 {END rol_fieldblock}
 											
-{BEGIN idevaluador_fieldblock}
+{BEGIN contrase_a_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_idevaluador}  r-vertical-field" 
-	data-signal-error-for="idevaluador{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="idevaluador" data-fieldname="idevaluador" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_contrase_a}  r-vertical-field" 
+	data-signal-error-for="contrase_a{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="contrase_a" data-fieldname="contraseña" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_idevaluador}">
-		{BEGIN idevaluador_label}{$label usuario idevaluador }{END idevaluador_label}
+	<label class="r-edit-label control-label" for="{$labelfor_contrase_a}">
+		{BEGIN contrase_a_label}{$label usuario contrase_a }{END contrase_a_label}
 	</label>
 	<div class="r-edit-field">
-		{$idevaluador_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="idevaluador" {$tooltipAttr usuario idevaluador } >
+		{$contrase_a_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="contrase_a" {$tooltipAttr usuario contrase_a } >
 		<div class="text-muted" >
-		{$tooltip usuario idevaluador }		</div>
+		{$tooltip usuario contrase_a }		</div>
 	</div>
 </div>
 
 
-{END idevaluador_fieldblock}
+{END contrase_a_fieldblock}
+											
+{BEGIN nomusuario_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nomusuario}  r-vertical-field" 
+	data-signal-error-for="nomusuario{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="nomusuario" data-fieldname="nomusuario" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_nomusuario}">
+		{BEGIN nomusuario_label}{$label usuario nomusuario }{END nomusuario_label}
+	</label>
+	<div class="r-edit-field">
+		{$nomusuario_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="nomusuario" {$tooltipAttr usuario nomusuario } >
+		<div class="text-muted" >
+		{$tooltip usuario nomusuario }		</div>
+	</div>
+</div>
+
+
+{END nomusuario_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -238,31 +214,6 @@
 	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
 	class="r-align-right r-ori-vert			col-md-6
 	">
-	 
-		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown dropup">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-										<span class="glyphicon glyphicon-menu-hamburger"></span>
-												<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
-				<a  {$resetbutton_attrs}  title="" >
-				
-		Reiniciar		
-		</a>
-	</li>
-							{BEGIN view_page_button}
-	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
-				<a  href="usuario_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
-				
-		Ver		
-		</a>
-	</li>
-{END view_page_button}
-					</ul>
-	</span>
-</span>
 	</div>					</div>
 	</div>		
 {END below-grid_block}

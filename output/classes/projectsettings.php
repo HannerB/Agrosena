@@ -3004,7 +3004,7 @@ class ProjectSettings
 	public static function getForLogin()
 	{
 		return !!Security::dbProvider()
-			? new ProjectSettings("", PAGE_LIST)
+			? new ProjectSettings("usuario", PAGE_LIST)
 			: null;
 	}
 
@@ -3579,6 +3579,46 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "retos" ] = "retos";
 	$projectEntities[ "registros" ] = array( "url" => "registros", "type" => 0 );
 	$projectEntitiesReverse[ "registros" ] = "registros";
+	$projectEntities[ "usuario" ] = array( "url" => "usuario", "type" => 0 );
+	$projectEntitiesReverse[ "usuario" ] = "usuario";
+	$projectEntities[ "registros_descargar" ] = array( "url" => "registros_descargar", "type" => 1 );
+	$projectEntitiesReverse[ "registros_descargar" ] = "registros_descargar";
+	$projectEntities[ "registros_ponentes" ] = array( "url" => "registros_ponentes", "type" => 1 );
+	$projectEntitiesReverse[ "registros_ponentes" ] = "registros_ponentes";
+	$projectEntities[ "registros_participantes" ] = array( "url" => "registros_participantes", "type" => 1 );
+	$projectEntitiesReverse[ "registros_participantes" ] = "registros_participantes";
+	$projectEntities[ "registros_poster" ] = array( "url" => "registros_poster", "type" => 1 );
+	$projectEntitiesReverse[ "registros_poster" ] = "registros_poster";
+	$projectEntities[ "rol" ] = array( "url" => "rol", "type" => 0 );
+	$projectEntitiesReverse[ "rol" ] = "rol";
+	$projectEntities[ "registros_vista" ] = array( "url" => "registros_vista", "type" => 1 );
+	$projectEntitiesReverse[ "registros_vista" ] = "registros_vista";
+	$projectEntities[ "evaluador" ] = array( "url" => "evaluador", "type" => 0 );
+	$projectEntitiesReverse[ "evaluador" ] = "evaluador";
+	$projectEntities[ "preguntas" ] = array( "url" => "preguntas", "type" => 0 );
+	$projectEntitiesReverse[ "preguntas" ] = "preguntas";
+	$projectEntities[ "calificacion" ] = array( "url" => "calificacion", "type" => 0 );
+	$projectEntitiesReverse[ "calificacion" ] = "calificacion";
+	$projectEntities[ "resultado" ] = array( "url" => "resultado", "type" => 0 );
+	$projectEntitiesReverse[ "resultado" ] = "resultado";
+	$projectEntities[ "resultado_grupos" ] = array( "url" => "resultado_grupos", "type" => 1 );
+	$projectEntitiesReverse[ "resultado_grupos" ] = "resultado_grupos";
+	$projectEntities[ "resultado reto1" ] = array( "url" => "resultado_reto1", "type" => 3 );
+	$projectEntitiesReverse[ "resultado_reto1" ] = "resultado reto1";
+	$projectEntities[ "resultado reto2" ] = array( "url" => "resultado_reto2", "type" => 3 );
+	$projectEntitiesReverse[ "resultado_reto2" ] = "resultado reto2";
+	$projectEntities[ "resultado reto3" ] = array( "url" => "resultado_reto3", "type" => 3 );
+	$projectEntitiesReverse[ "resultado_reto3" ] = "resultado reto3";
+	$projectEntities[ "Resultados" ] = array( "url" => "resultados", "type" => 4 );
+	$projectEntitiesReverse[ "resultados" ] = "Resultados";
+	$projectEntities[ "registros_asistente" ] = array( "url" => "registros_asistente", "type" => 1 );
+	$projectEntitiesReverse[ "registros_asistente" ] = "registros_asistente";
+	$projectEntities[ "registrosParticipantes" ] = array( "url" => "registrosparticipantes", "type" => 1 );
+	$projectEntitiesReverse[ "registrosparticipantes" ] = "registrosParticipantes";
+	$projectEntities[ "registrosPoster" ] = array( "url" => "registrosposter", "type" => 1 );
+	$projectEntitiesReverse[ "registrosposter" ] = "registrosPoster";
+	$projectEntities[ "registrosPonencias" ] = array( "url" => "registrosponencias", "type" => 1 );
+	$projectEntitiesReverse[ "registrosponencias" ] = "registrosPonencias";
 }
 
 function findTable( $table ) {

@@ -3,10 +3,10 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -159,6 +159,28 @@
 </div>
 
 {END reto_fieldblock}
+											
+{BEGIN id_registro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_registro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id_registro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="id_registro" data-fieldname="id_registro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_registro}">
+		{$label equipos id_registro }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_registro}
+	</div>
+	<div class="r-search-field">
+		{$id_registro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_registro_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_registro_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

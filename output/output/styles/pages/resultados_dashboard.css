@@ -1,0 +1,41 @@
+[data-page="resultados_dashboard"][data-itemid="dashboard-item"] {
+  height: 500px;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  color: #005008;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  background-color: #d3e9c0;
+  background-image: none;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item1"] {
+  height: 500px;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item1"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item1"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  color: #005008;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item1"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item1"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  background-color: #d3e9c0;
+  background-image: none;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item2"] {
+  height: 500px;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item2"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item2"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  color: #005008;
+}
+[data-page="resultados_dashboard"][data-itemid="dashboard-item2"] > .panel > .panel-heading,
+[data-page="resultados_dashboard"][data-itemid="dashboard-item2"] > * > .tab-content > .tab-pane > .panel > .panel-heading {
+  background-color: #d3e9c0;
+  background-image: none;
+}
+[data-page="resultados_dashboard"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+

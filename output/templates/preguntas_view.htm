@@ -1,0 +1,371 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/logo.png" type="image/png">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel preguntas view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-vertical-field" data-fieldname="id" data-signal-error-for="id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id}">
+		
+		{BEGIN id_label}{$label preguntas id }{END id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_value}	</div>
+
+		
+</div>
+
+
+{END id_fieldblock}
+											
+{BEGIN pregunta1_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta1}  r-vertical-field" data-fieldname="pregunta1" data-signal-error-for="pregunta1{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="pregunta1" data-fieldname="pregunta1" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta1}">
+		
+		{BEGIN pregunta1_label}{$label preguntas pregunta1 }{END pregunta1_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta1_value}	</div>
+
+		
+</div>
+
+
+{END pregunta1_fieldblock}
+											
+{BEGIN pregunta2_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta2}  r-vertical-field" data-fieldname="pregunta2" data-signal-error-for="pregunta2{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="pregunta2" data-fieldname="pregunta2" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta2}">
+		
+		{BEGIN pregunta2_label}{$label preguntas pregunta2 }{END pregunta2_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta2_value}	</div>
+
+		
+</div>
+
+
+{END pregunta2_fieldblock}
+											
+{BEGIN pregunta3_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta3}  r-vertical-field" data-fieldname="pregunta3" data-signal-error-for="pregunta3{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="pregunta3" data-fieldname="pregunta3" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta3}">
+		
+		{BEGIN pregunta3_label}{$label preguntas pregunta3 }{END pregunta3_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta3_value}	</div>
+
+		
+</div>
+
+
+{END pregunta3_fieldblock}
+											
+{BEGIN pregunta4_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta4}  r-vertical-field" data-fieldname="pregunta4" data-signal-error-for="pregunta4{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="pregunta4" data-fieldname="pregunta4" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta4}">
+		
+		{BEGIN pregunta4_label}{$label preguntas pregunta4 }{END pregunta4_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta4_value}	</div>
+
+		
+</div>
+
+
+{END pregunta4_fieldblock}
+											
+{BEGIN pregunta5_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta5}  r-vertical-field" data-fieldname="pregunta5" data-signal-error-for="pregunta5{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="pregunta5" data-fieldname="pregunta5" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta5}">
+		
+		{BEGIN pregunta5_label}{$label preguntas pregunta5 }{END pregunta5_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta5_value}	</div>
+
+		
+</div>
+
+
+{END pregunta5_fieldblock}
+											
+{BEGIN pregunta6_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta6}  r-vertical-field" data-fieldname="pregunta6" data-signal-error-for="pregunta6{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="pregunta6" data-fieldname="pregunta6" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta6}">
+		
+		{BEGIN pregunta6_label}{$label preguntas pregunta6 }{END pregunta6_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta6_value}	</div>
+
+		
+</div>
+
+
+{END pregunta6_fieldblock}
+											
+{BEGIN pregunta7_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta7}  r-vertical-field" data-fieldname="pregunta7" data-signal-error-for="pregunta7{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="pregunta7" data-fieldname="pregunta7" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta7}">
+		
+		{BEGIN pregunta7_label}{$label preguntas pregunta7 }{END pregunta7_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta7_value}	</div>
+
+		
+</div>
+
+
+{END pregunta7_fieldblock}
+											
+{BEGIN pregunta8_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pregunta8}  r-vertical-field" data-fieldname="pregunta8" data-signal-error-for="pregunta8{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="pregunta8" data-fieldname="pregunta8" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pregunta8}">
+		
+		{BEGIN pregunta8_label}{$label preguntas pregunta8 }{END pregunta8_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pregunta8_value}	</div>
+
+		
+</div>
+
+
+{END pregunta8_fieldblock}
+											
+{BEGIN Pregunta9_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pregunta9}  r-vertical-field" data-fieldname="Pregunta9" data-signal-error-for="Pregunta9{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Pregunta9" data-fieldname="Pregunta9" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Pregunta9}">
+		
+		{BEGIN Pregunta9_label}{$label preguntas Pregunta9 }{END Pregunta9_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Pregunta9_value}	</div>
+
+		
+</div>
+
+
+{END Pregunta9_fieldblock}
+											
+{BEGIN Pregunta10_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pregunta10}  r-vertical-field" data-fieldname="Pregunta10" data-signal-error-for="Pregunta10{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Pregunta10" data-fieldname="Pregunta10" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Pregunta10}">
+		
+		{BEGIN Pregunta10_label}{$label preguntas Pregunta10 }{END Pregunta10_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Pregunta10_value}	</div>
+
+		
+</div>
+
+
+{END Pregunta10_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="preguntas_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

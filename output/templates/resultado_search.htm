@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -160,28 +159,6 @@
 </div>
 
 {END puntaje_fieldblock}
-											
-{BEGIN reto_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_reto}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="reto{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="reto" data-fieldname="reto" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_reto}">
-		{$label resultado reto }	</label>
-	<div class="r-search-option">
-		{$searchtype_reto}
-	</div>
-	<div class="r-search-field">
-		{$reto_editcontrol}	</div>
-	<div class="r-search-field">
-		{$reto_editcontrol1}
-	</div>
-	
-</div>
-
-{END reto_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

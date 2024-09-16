@@ -3,10 +3,10 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -203,74 +203,6 @@
 {END menuitems_main}
 			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Búsqueda			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_nombre_completo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_nombre_completo}" {$filterRow_attrs_nombre_completo}>
-			<label>{$label registros nombre_completo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_nombre_completo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_nombre_completo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_nombre_completo}</span>
-						</div>
-		{END searchCtrlBlock_nombre_completo}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -363,31 +295,56 @@
 		Búsqueda avanzada		
 		</a>
 	</li>
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="showOptPanel{$id}"  title="" >
-				
-		Mostrar panel de búsqueda		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="hideOptPanel{$id}"  title="" >
-				
-		Ocultar panel de búsqueda		
-		</a>
-	</li>
-{END searchPanelTopButtons}
 					</ul>
 	</span>
 </span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
 			</span>
 								</nav>
 {END supertop_block}
 						{$locking}
 				</div>
-				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
@@ -410,7 +367,7 @@
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
+	<a type="button" title="" class="btn btn-success  btn-sm 
 	" {$addlink_attrs} href="registros_add.php{$stateLink_full}" >
 							Añadir nuevo			</a>
 </span>
@@ -418,7 +375,7 @@
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
+	<a type="button" title="" class="btn btn-danger  btn-sm 
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
 							Borrar			</a>
 </span>
@@ -453,13 +410,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nombre_completo"]:before {
 		content: "{$label registros nombre_completo}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="edad"]:before {
-		content: "{$label registros edad}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="tipo_doc"]:before {
-		content: "{$label registros tipo_doc}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="num_doc"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="num_doc"]:before {
 		content: "{$label registros num_doc}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="correo"]:before {
@@ -468,16 +419,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="celular"]:before {
 		content: "{$label registros celular}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="institucion"]:before {
-		content: "{$label registros institucion}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="centro"]:before {
-		content: "{$label registros centro}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="tipo"]:before {
-		content: "{$label registros tipo}";
-	}
-																}
+																			}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-striped table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -539,7 +481,7 @@
 
 			data-field="nombre_completo"
 	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
 	>
 
 	 
@@ -563,74 +505,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$edad_class}	"
-
-			data-field="edad"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN edad_fieldheadercolumn}
-	{BEGIN edad_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="edad" data-fieldname="edad" 
-
-			{$edad_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label registros edad }</span>
-					{$arrow_icon_edad}
-			</span>
-	</span>
-	{END edad_fieldheader}
-{END edad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_doc_class}	"
-
-			data-field="tipo_doc"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_doc_fieldheadercolumn}
-	{BEGIN tipo_doc_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_doc" data-fieldname="tipo_doc" 
-
-			{$tipo_doc_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label registros tipo_doc }</span>
-					{$arrow_icon_tipo_doc}
-			</span>
-	</span>
-	{END tipo_doc_fieldheader}
-{END tipo_doc_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
@@ -641,7 +515,7 @@
 
 			data-field="num_doc"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
 	>
 
 	 
@@ -675,7 +549,7 @@
 
 			data-field="correo"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
 	>
 
 	 
@@ -709,7 +583,7 @@
 
 			data-field="celular"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
 	>
 
 	 
@@ -733,108 +607,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$institucion_class}	"
-
-			data-field="institucion"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN institucion_fieldheadercolumn}
-	{BEGIN institucion_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="institucion" data-fieldname="institucion" 
-
-			{$institucion_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label registros institucion }</span>
-					{$arrow_icon_institucion}
-			</span>
-	</span>
-	{END institucion_fieldheader}
-{END institucion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$centro_class}	"
-
-			data-field="centro"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN centro_fieldheadercolumn}
-	{BEGIN centro_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="centro" data-fieldname="centro" 
-
-			{$centro_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label registros centro }</span>
-					{$arrow_icon_centro}
-			</span>
-	</span>
-	{END centro_fieldheader}
-{END centro_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_class}	"
-
-			data-field="tipo"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_fieldheadercolumn}
-	{BEGIN tipo_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo" data-fieldname="tipo" 
-
-			{$tipo_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label registros tipo }</span>
-					{$arrow_icon_tipo}
-			</span>
-	</span>
-	{END tipo_fieldheader}
-{END tipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
 							</tr>
 															
 					{END grid_header}
@@ -852,35 +624,13 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"		data-control-cell
 	
 	>
 
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="registros_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="registros_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -929,48 +679,6 @@
 {END nombre_completo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$edad_class}	"
-
-			data-field="edad"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN edad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="edad" data-fieldname="edad" data-default-width >
-{$edad_value}
-</span>
-{END edad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_doc_class}	"
-
-			data-field="tipo_doc"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_doc_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_doc" data-fieldname="tipo_doc" data-default-width >
-{$tipo_doc_value}
-</span>
-{END tipo_doc_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
@@ -1034,69 +742,6 @@
 {END celular_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$institucion_class}	"
-
-			data-field="institucion"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN institucion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="institucion" data-fieldname="institucion" data-default-width >
-{$institucion_value}
-</span>
-{END institucion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$centro_class}	"
-
-			data-field="centro"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN centro_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="centro" data-fieldname="centro" data-default-width >
-{$centro_value}
-</span>
-{END centro_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_class}	"
-
-			data-field="tipo"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo" data-fieldname="tipo" data-default-width >
-{$tipo_value}
-</span>
-{END tipo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
 							</tr>
 										
 											{END grid_row}
@@ -1153,36 +798,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$edad_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_doc_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
@@ -1228,51 +843,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$institucion_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$centro_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$tipo_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="registros_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

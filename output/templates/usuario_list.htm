@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -204,113 +203,6 @@
 {END menuitems_main}
 			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Búsqueda			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_contrase_a}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_contrase_a}" {$filterRow_attrs_contrase_a}>
-			<label>{$label usuario contrase_a }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_contrase_a}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_contrase_a}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_contrase_a}</span>
-						</div>
-		{END searchCtrlBlock_contrase_a}
-																{BEGIN searchCtrlBlock_nomusuario}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_nomusuario}" {$filterRow_attrs_nomusuario}>
-			<label>{$label usuario nomusuario }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_nomusuario}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_nomusuario}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_nomusuario}</span>
-						</div>
-		{END searchCtrlBlock_nomusuario}
-																{BEGIN searchCtrlBlock_idevaluador}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_idevaluador}" {$filterRow_attrs_idevaluador}>
-			<label>{$label usuario idevaluador }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_idevaluador}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_idevaluador}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_idevaluador}</span>
-						</div>
-		{END searchCtrlBlock_idevaluador}
-																{BEGIN searchCtrlBlock_rol}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_rol}" {$filterRow_attrs_rol}>
-			<label>{$label usuario rol }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_rol}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_rol}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_rol}</span>
-						</div>
-		{END searchCtrlBlock_rol}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -357,30 +249,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
-				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
-
-<div  class="input-group">
-{BEGIN searchform_text}
-	<input type="search" class="form-control" {$searchfor_attrs} size="25">
-{END searchform_text}
-	<span class="input-group-btn">
-	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
-			<span class="glyphicon glyphicon-remove"></span>
-		</button>
-	{END searchform_showall}
-
-	{BEGIN searchform_search}
-	<button {$searchbutton_attrs} class="btn btn-primary" >
-		<span class="glyphicon glyphicon-search"></span>
-	</button>
-	{END searchform_search}
-	</span>
-</div>
-		
-</span>			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -389,14 +257,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							{BEGIN exportselected_link}
-	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
-				
-		Exportar seleccionados		
-		</a>
-	</li>
-{END exportselected_link}
 							{BEGIN deleteselected_link}
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
@@ -405,44 +265,6 @@
 		</a>
 	</li>
 {END deleteselected_link}
-							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="usuario_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="showOptPanel{$id}"  title="" >
-				
-		Mostrar panel de búsqueda		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="hideOptPanel{$id}"  title="" >
-				
-		Ocultar panel de búsqueda		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							<li role="separator" class="divider"></li>							{BEGIN export_link}
-	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportlink_attrs}  title="" >
-				
-		Exportar resultados		
-		</a>
-	</li>
-{END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="usuario_import.php{$stateLink_full}"  title="" >
-				
-		Importar		
-		</a>
-	</li>
-{END import_link}
 					</ul>
 	</span>
 </span>
@@ -492,7 +314,7 @@
 {END supertop_block}
 						{$locking}
 				</div>
-				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
@@ -515,7 +337,7 @@
 		 
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
+	<a type="button" title="" class="btn btn-success  btn-sm 
 	" {$addlink_attrs} href="usuario_add.php{$stateLink_full}" >
 							Añadir nuevo			</a>
 </span>
@@ -523,7 +345,7 @@
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
+	<a type="button" title="" class="btn btn-danger  btn-sm 
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
 							Borrar artículos seleccionados			</a>
 </span>
@@ -540,84 +362,7 @@
 {$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									<div id="print_friendly_scope{$id}">
-	<div class="row">
-		<div class="col-md-4">
-			Rango:		</div>
-
-			 
-		{BEGIN print_friendly_all}
-		<div class="col-md-8">
-			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="usuario_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Imprimir todas las páginas							</label>
-		</div>
-		{END print_friendly_all}
-		</div>
-		<div class="row">
-		<div class="col-md-4">&nbsp;</div>
-		<div class="col-md-8">
-			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="usuario_print.php?{$crosstable_attrs}">
-				Imprimir esta página			</label>
-		</div>
-	</div>
-		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Imprimir la selección			</label>
-		</div>
-	</div>
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									<div>
-	<label for="printPerPage{$id}">
-					Resultados por página							
-	</label>
-	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
-</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-					 text-center 					">
-									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" id="print_friendly_button{$id}" >
-							Imprimir			</a>
-</span>
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
-		</div>					</div>
+</span>		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -632,16 +377,13 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rol"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rol"]:before {
 		content: "{$label usuario rol}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="contrase_a"]:before {
 		content: "{$label usuario contrase_a}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="idevaluador"]:before {
-		content: "{$label usuario idevaluador}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nomusuario"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nomusuario"]:before {
 		content: "{$label usuario nomusuario}";
 	}
 	}
@@ -696,24 +438,24 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
-	{$cell_grid_headcell_field}
+	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$rol_class}	"
 
 			data-field="rol"
 	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
 	>
 
 	 
 		{BEGIN rol_fieldheadercolumn}
 	{BEGIN rol_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rol" data-fieldname="rol" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rol" data-fieldname="rol" 
 
 			{$rol_orderlinkattrs}
 	
@@ -729,25 +471,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
-	{$cell_grid_headcell_field1}
+	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$contrase_a_class}	"
 
 			data-field="contrase_a"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
 	>
 
 	 
 		{BEGIN contrase_a_fieldheadercolumn}
 	{BEGIN contrase_a_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="contrase_a" data-fieldname="contraseña" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="contrase_a" data-fieldname="contraseña" 
 
 			{$contrase_a_orderlinkattrs}
 	
@@ -763,59 +505,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$idevaluador_class}	"
-
-			data-field="idevaluador"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN idevaluador_fieldheadercolumn}
-	{BEGIN idevaluador_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idevaluador" data-fieldname="idevaluador" 
-
-			{$idevaluador_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label usuario idevaluador }</span>
-					{$arrow_icon_idevaluador}
-			</span>
-	</span>
-	{END idevaluador_fieldheader}
-{END idevaluador_fieldheadercolumn}
-
-	
-	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field3}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nomusuario_class}	"
 
 			data-field="nomusuario"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
 	>
 
 	 
 		{BEGIN nomusuario_fieldheadercolumn}
 	{BEGIN nomusuario_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomusuario" data-fieldname="nomusuario" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomusuario" data-fieldname="nomusuario" 
 
 			{$nomusuario_orderlinkattrs}
 	
@@ -831,7 +539,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -849,7 +557,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"		data-control-cell
@@ -860,24 +568,13 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="usuario_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
-				
-								</a>
+	<a type="button" title="Editar" class="btn btn-success  btn-sm 
+	" href="usuario_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >
+					<span class="glyphicon glyphicon-pencil"></span>
+										</a>
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="usuario_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -905,17 +602,17 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$rol_class}	"
 
 			data-field="rol"
 	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -925,18 +622,18 @@
 </span>
 {END rol_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field1}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$contrase_a_class}	"
 
 			data-field="contrase_a"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -946,39 +643,18 @@
 </span>
 {END contrase_a_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$idevaluador_class}	"
-
-			data-field="idevaluador"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN idevaluador_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idevaluador" data-fieldname="idevaluador" data-default-width >
-{$idevaluador_value}
-</span>
-{END idevaluador_fieldcolumn}	
-	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nomusuario_class}	"
 
 			data-field="nomusuario"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -988,7 +664,7 @@
 </span>
 {END nomusuario_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											{END grid_row}
@@ -1030,28 +706,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$rol_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$contrase_a_class}	"
+		 r-ori-vert		 {$rol_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
@@ -1066,7 +727,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$idevaluador_class}	"
+		 r-ori-vert		 {$contrase_a_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
@@ -1075,21 +736,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	
-	{$cell_grid_footcell_field3}
+	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nomusuario_class}	"
 
 	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuario_list"	
 	>
 
 	
 	</td>
-	{END cellblock_grid_footcell_field3}
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

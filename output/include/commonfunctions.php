@@ -213,6 +213,46 @@ function checkTableName($shortTName )
 		return true;
 	if ("registros" == $shortTName )
 		return true;
+	if ("usuario" == $shortTName )
+		return true;
+	if ("registros_descargar" == $shortTName )
+		return true;
+	if ("registros_ponentes" == $shortTName )
+		return true;
+	if ("registros_participantes" == $shortTName )
+		return true;
+	if ("registros_poster" == $shortTName )
+		return true;
+	if ("rol" == $shortTName )
+		return true;
+	if ("registros_vista" == $shortTName )
+		return true;
+	if ("evaluador" == $shortTName )
+		return true;
+	if ("preguntas" == $shortTName )
+		return true;
+	if ("calificacion" == $shortTName )
+		return true;
+	if ("resultado" == $shortTName )
+		return true;
+	if ("resultado_grupos" == $shortTName )
+		return true;
+	if ("resultado_reto1" == $shortTName )
+		return true;
+	if ("resultado_reto2" == $shortTName )
+		return true;
+	if ("resultado_reto3" == $shortTName )
+		return true;
+	if ("resultados" == $shortTName )
+		return true;
+	if ("registros_asistente" == $shortTName )
+		return true;
+	if ("registrosparticipantes" == $shortTName )
+		return true;
+	if ("registrosposter" == $shortTName )
+		return true;
+	if ("registrosponencias" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -308,6 +348,186 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="registros";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("usuario");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="usuario";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_descargar");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_descargar";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_ponentes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_ponentes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_participantes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_participantes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_poster");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_poster";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("rol");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="rol";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_vista");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_vista";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("evaluador");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="evaluador";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("preguntas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="preguntas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("calificacion");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="calificacion";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("resultado");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="resultado";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("resultado_grupos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="resultado_grupos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("resultado reto1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="resultado reto1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("resultado reto2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="resultado reto2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("resultado reto3");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="resultado reto3";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Resultados");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Resultados";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registros_asistente");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registros_asistente";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registrosParticipantes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registrosParticipantes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registrosPoster");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registrosPoster";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("registrosPonencias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="registrosPonencias";
+	}
 	return $arr;
 }
 
@@ -322,6 +542,26 @@ function GetTablesListWithoutSecurity()
 	$arr[]="integrantes";
 	$arr[]="retos";
 	$arr[]="registros";
+	$arr[]="usuario";
+	$arr[]="registros_descargar";
+	$arr[]="registros_ponentes";
+	$arr[]="registros_participantes";
+	$arr[]="registros_poster";
+	$arr[]="rol";
+	$arr[]="registros_vista";
+	$arr[]="evaluador";
+	$arr[]="preguntas";
+	$arr[]="calificacion";
+	$arr[]="resultado";
+	$arr[]="resultado_grupos";
+	$arr[]="resultado reto1";
+	$arr[]="resultado reto2";
+	$arr[]="resultado reto3";
+	$arr[]="Resultados";
+	$arr[]="registros_asistente";
+	$arr[]="registrosParticipantes";
+	$arr[]="registrosPoster";
+	$arr[]="registrosPonencias";
 	return $arr;
 }
 
@@ -365,6 +605,12 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
+	if($shorttable=="resultado_reto1")
+		return "2DBar";
+	if($shorttable=="resultado_reto2")
+		return "2DBar";
+	if($shorttable=="resultado_reto3")
+		return "2DBar";
 	return "";
 }
 
@@ -945,33 +1191,428 @@ function GetUserPermissionsStatic( $table )
 	$extraPerm = "";
 	if( $table=="criterio" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "SE".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="equipos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="integrantes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="retos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="registros" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "A".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
+	}
+	if( $table=="usuario" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDS".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_descargar" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_ponentes" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_participantes" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_poster" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="rol" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_vista" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="evaluador" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="preguntas" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="calificacion" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="resultado" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="resultado_grupos" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="resultado reto1" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="resultado reto2" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="resultado reto3" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="Resultados" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registros_asistente" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registrosParticipantes" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registrosPoster" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="registrosPonencias" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+		if( $sUserGroup=="admin" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="evaluador" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

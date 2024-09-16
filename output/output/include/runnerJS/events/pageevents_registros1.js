@@ -1,0 +1,3 @@
+
+Runner.pages.PageSettings.addPageEvent('registros1',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var tipreg=proxy.name
+if(tipreg=='tipo1'){window.location.href='registros_add.php'}else if(tipreg=="tipo2"){window.location.href='registros_add.php?page=add1'}else if(tipreg=="tipo3"){window.location.href='registros_add.php?page=add2'}else if(tipreg=="tipo4"){window.location.href='registros_add.php?page=add3'}});

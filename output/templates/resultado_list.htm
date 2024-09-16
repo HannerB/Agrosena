@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -259,19 +258,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_idequipo}</span>
 						</div>
 		{END searchCtrlBlock_idequipo}
-																{BEGIN searchCtrlBlock_reto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_reto}" {$filterRow_attrs_reto}>
-			<label>{$label resultado reto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_reto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_reto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_reto}</span>
-						</div>
-		{END searchCtrlBlock_reto}
 																{BEGIN searchCtrlBlock_puntaje}
 
 
@@ -419,6 +405,14 @@
 		</a>
 	</li>
 {END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="resultado_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
 					</ul>
 	</span>
 </span>
@@ -524,9 +518,6 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="puntaje"]:before {
 		content: "{$label resultado puntaje}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="reto"]:before {
-		content: "{$label resultado reto}";
-	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-striped table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -573,14 +564,14 @@
 
 			data-field="idevaluador"
 	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resultado_list"	
 	>
 
 	 
 		{BEGIN idevaluador_fieldheadercolumn}
 	{BEGIN idevaluador_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idevaluador" data-fieldname="idevaluador" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idevaluador" data-fieldname="idevaluador" 
 
 			{$idevaluador_orderlinkattrs}
 	
@@ -607,14 +598,14 @@
 
 			data-field="idequipo"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resultado_list"	
 	>
 
 	 
 		{BEGIN idequipo_fieldheadercolumn}
 	{BEGIN idequipo_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idequipo" data-fieldname="idequipo" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idequipo" data-fieldname="idequipo" 
 
 			{$idequipo_orderlinkattrs}
 	
@@ -641,14 +632,14 @@
 
 			data-field="puntaje"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resultado_list"	
 	>
 
 	 
 		{BEGIN puntaje_fieldheadercolumn}
 	{BEGIN puntaje_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="puntaje" data-fieldname="puntaje" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="puntaje" data-fieldname="puntaje" 
 
 			{$puntaje_orderlinkattrs}
 	
@@ -665,40 +656,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reto_class}	"
-
-			data-field="reto"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reto_fieldheadercolumn}
-	{BEGIN reto_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reto" data-fieldname="reto" 
-
-			{$reto_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label resultado reto }</span>
-					{$arrow_icon_reto}
-			</span>
-	</span>
-	{END reto_fieldheader}
-{END reto_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -797,27 +754,6 @@
 {END puntaje_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reto_class}	"
-
-			data-field="reto"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN reto_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reto" data-fieldname="reto" data-default-width >
-{$reto_value}
-</span>
-{END reto_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -889,21 +825,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reto_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resultado_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

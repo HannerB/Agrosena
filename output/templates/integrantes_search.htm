@@ -3,10 +3,10 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -94,28 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="id{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_id}">
-		{$label integrantes id }	</label>
-	<div class="r-search-option">
-		{$searchtype_id}
-	</div>
-	<div class="r-search-field">
-		{$id_editcontrol}	</div>
-	<div class="r-search-field">
-		{$id_editcontrol1}
-	</div>
-	
-</div>
-
-{END id_fieldblock}
-											
 {BEGIN cedula_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_cedula}  r-horizontal-field form-horizontal" 	
@@ -159,50 +137,6 @@
 </div>
 
 {END nombre_fieldblock}
-											
-{BEGIN pertenece_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_pertenece}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="pertenece{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="pertenece" data-fieldname="pertenece" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_pertenece}">
-		{$label integrantes pertenece }	</label>
-	<div class="r-search-option">
-		{$searchtype_pertenece}
-	</div>
-	<div class="r-search-field">
-		{$pertenece_editcontrol}	</div>
-	<div class="r-search-field">
-		{$pertenece_editcontrol1}
-	</div>
-	
-</div>
-
-{END pertenece_fieldblock}
-											
-{BEGIN idequipo_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_idequipo}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="idequipo{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="idequipo" data-fieldname="idequipo" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_idequipo}">
-		{$label integrantes idequipo }	</label>
-	<div class="r-search-option">
-		{$searchtype_idequipo}
-	</div>
-	<div class="r-search-field">
-		{$idequipo_editcontrol}	</div>
-	<div class="r-search-field">
-		{$idequipo_editcontrol1}
-	</div>
-	
-</div>
-
-{END idequipo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

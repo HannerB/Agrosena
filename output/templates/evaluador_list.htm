@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -259,19 +258,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_idevaluador}</span>
 						</div>
 		{END searchCtrlBlock_idevaluador}
-																{BEGIN searchCtrlBlock_idusuario}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_idusuario}" {$filterRow_attrs_idusuario}>
-			<label>{$label evaluador idusuario }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_idusuario}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_idusuario}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_idusuario}</span>
-						</div>
-		{END searchCtrlBlock_idusuario}
 																{BEGIN searchCtrlBlock_nombreevaluador}
 
 
@@ -285,6 +271,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_nombreevaluador}</span>
 						</div>
 		{END searchCtrlBlock_nombreevaluador}
+																{BEGIN searchCtrlBlock_idusuario}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idusuario}" {$filterRow_attrs_idusuario}>
+			<label>{$label evaluador idusuario }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idusuario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idusuario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idusuario}</span>
+						</div>
+		{END searchCtrlBlock_idusuario}
 		
 
 	</div>
@@ -376,7 +375,15 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		Exportar seleccionados		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="evaluador_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
 		Búsqueda avanzada		
@@ -398,6 +405,22 @@
 		</a>
 	</li>
 {END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="evaluador_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
 					</ul>
 	</span>
 </span>
@@ -597,7 +620,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nombreevaluador"]:before {
 		content: "{$label evaluador nombreevaluador}";
 	}
-				}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-striped table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -611,44 +634,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="evaluador_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
-									{BEGIN cellblock_grid_headcell_checkbox}
-	<th
-	
-	{$cell_grid_headcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="evaluador_list"	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkboxheader_attrs}>
-</span>
-{END checkbox_column}
-	
-	</th>
-	{END cellblock_grid_headcell_checkbox}
 									{BEGIN cellblock_grid_headcell_details}
 	<th
 	
@@ -658,7 +643,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="evaluador_list"	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="evaluador_list"		data-control-cell
+	
 	>
 
 	
@@ -709,57 +695,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="evaluador_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="evaluador_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
-									{BEGIN cellblock_grid_cell_checkbox}
-	<td
-	
-	{$cell_grid_cell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}
-		>
-</span>	
-{END checkbox_column}
-	
-	</td>
-	{END cellblock_grid_cell_checkbox}
 									{BEGIN cellblock_grid_cell_details}
 	<td
 	
@@ -855,36 +790,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
-									{BEGIN cellblock_grid_footcell_checkbox}
-	<td
-	
-	{$cell_grid_footcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_checkbox}
 									{BEGIN cellblock_grid_footcell_details}
 	<td
 	

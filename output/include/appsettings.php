@@ -592,7 +592,7 @@ $globalSettings["keepLoggedIn"] = true;
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
 
-$globalSettings["useCustomSMTPSettings"] = false;
+$globalSettings["useCustomSMTPSettings"] = true;
 
 $globalSettings["strSMTPUser"] = "";
 $globalSettings["strSMTPServer"] = "localhost";
@@ -605,7 +605,7 @@ $globalSettings["strFromEmail"] = "";
 /*
 $globalSettings["ADDomain"] = "";
 $globalSettings["ADServer"] = "";
-$globalSettings["ADFollowRefs"] = 0;
+$globalSettings["ADFollowRefs"] = ;
 $globalSettings["ADBaseDN"] = "";
 if( !$globalSettings["ADBaseDN"] ) {
 	$globalSettings["ADBaseDN"] = ldap_Domain2DN( $globalSettings["ADDomain"] );
@@ -621,6 +621,7 @@ $adNestedPermissions = false;
 
 $ajaxSearchStartsWith = true;
 
+$globalSettings["staticGuestLogin"] = true;
 
 
 $globalSettings["LandingPageType"] = 0;
@@ -630,7 +631,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Spanish"] = "agrojam";
+$globalSettings["ProjectLogo"]["Spanish"] = "<img src=\"images/logo.png\" width=\"90px\">";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -639,6 +640,8 @@ $globalSettings["useCookieBanner"] = 0 != 0;
 $globalSettings["htmlEmailTemplates"] = array();
 
 
+$globalSettings["createLoginPage"] = true;
+$globalSettings["userGroupCount"] = 4;
 
 
 $globalSettings["apiGoogleMapsCode"] = "";
@@ -695,7 +698,7 @@ $globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
 
 
 
-$bsProjectTheme = "paper";
+$bsProjectTheme = "cerulean";
 $bsProjectSize = "normal";
 
 $wr_pagestylepath = "webreports";
@@ -708,17 +711,28 @@ $WRAdminPagePassword = "";
  * Legacy variables for pre-10.6 business templates only.
  * DEPRECATED
  */
-$cLoginTable = "";
+$cLoginTable = "usuario";
 $cDisplayNameField = "";
-$cUserNameField	= "";
-$cPasswordField	= "";
-$cUserGroupField = "";
+$cUserNameField	= "nomusuario";
+$cPasswordField	= "contraseña";
+$cUserGroupField = "rol";
 $cEmailField = "";
 $cUserpicField = "";
 $loginKeyFields= array();
+$loginKeyFields[] = "id_usuario";
+
+//	legacy use only
+$cKeyFields = $loginKeyFields;
+
+/**
+ * End Legacy csection
+ */
 
 
-$globalSettings["jwtSecret"] = "8VHYufJjWSttMM1XyvLw";
+$globalSettings["usersDatasourceTable"] = "usuario";
+
+
+$globalSettings["jwtSecret"] = "aUDFlQ14giXrCGqo8RHA";
 
 
 $arrCustomPages = array();
@@ -736,9 +750,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "56_1724367060";
+$projectBuildKey = "519_1725920433";
 $wizardBuildKey = "40608";
-$projectBuildNumber = "56";
+$projectBuildNumber = "519";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -769,6 +783,26 @@ $tableCaptions["Spanish"]["equipos"] = "Equipos";
 $tableCaptions["Spanish"]["integrantes"] = "Integrantes";
 $tableCaptions["Spanish"]["retos"] = "Retos";
 $tableCaptions["Spanish"]["registros"] = "Registros";
+$tableCaptions["Spanish"]["usuario"] = "Usuario";
+$tableCaptions["Spanish"]["registros_descargar"] = "Registros Descargar";
+$tableCaptions["Spanish"]["registros_ponentes"] = "Registros Ponentes";
+$tableCaptions["Spanish"]["registros_participantes"] = "Registros Participantes";
+$tableCaptions["Spanish"]["registros_poster"] = "Registros Poster";
+$tableCaptions["Spanish"]["rol"] = "Rol";
+$tableCaptions["Spanish"]["registros_vista"] = "Registros Vista";
+$tableCaptions["Spanish"]["evaluador"] = "Evaluador";
+$tableCaptions["Spanish"]["preguntas"] = "Preguntas";
+$tableCaptions["Spanish"]["calificacion"] = "Calificacion";
+$tableCaptions["Spanish"]["resultado"] = "Resultado";
+$tableCaptions["Spanish"]["resultado_grupos"] = "Resultado Grupos";
+$tableCaptions["Spanish"]["resultado_reto1"] = "Resultado Reto1";
+$tableCaptions["Spanish"]["resultado_reto2"] = "Resultado Reto2";
+$tableCaptions["Spanish"]["resultado_reto3"] = "Resultado Reto3";
+$tableCaptions["Spanish"]["Resultados"] = "Resultados";
+$tableCaptions["Spanish"]["registros_asistente"] = "Registros Asistente";
+$tableCaptions["Spanish"]["registrosParticipantes"] = "Registros Participantes";
+$tableCaptions["Spanish"]["registrosPoster"] = "Registros Poster";
+$tableCaptions["Spanish"]["registrosPonencias"] = "Registros Ponencias";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -891,6 +925,18 @@ $fieldFilterValueShrinkPostfix = "...";
 
 // default connection link #9875
 $conn = $cman->getDefault()->conn;
+
+
+//	delete old username & password cookies
+if( $_COOKIE["password"] ) {
+	runner_setcookie("username", "", time() - 1, "", "", false, false);
+	runner_setcookie("password", "", time() - 1, "", "", false, false);
+}
+
+
+$logoutPerformed = false;
+Security::autoLoginAsGuest();
+Security::updateCSRFCookie();
 
 
 $isUseRTEBasic = true;

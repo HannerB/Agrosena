@@ -6,8 +6,7 @@
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -160,50 +159,6 @@
 </div>
 
 {END idusuario_fieldblock}
-											
-{BEGIN idevaluador1_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_idevaluador1}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="idevaluador1{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="idevaluador1" data-fieldname="idevaluador1" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_idevaluador1}">
-		{$label evaluador idevaluador1 }	</label>
-	<div class="r-search-option">
-		{$searchtype_idevaluador1}
-	</div>
-	<div class="r-search-field">
-		{$idevaluador1_editcontrol}	</div>
-	<div class="r-search-field">
-		{$idevaluador1_editcontrol1}
-	</div>
-	
-</div>
-
-{END idevaluador1_fieldblock}
-											
-{BEGIN nomusuario_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_nomusuario}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="nomusuario{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="nomusuario" data-fieldname="nomusuario" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_nomusuario}">
-		{$label evaluador nomusuario }	</label>
-	<div class="r-search-option">
-		{$searchtype_nomusuario}
-	</div>
-	<div class="r-search-field">
-		{$nomusuario_editcontrol}	</div>
-	<div class="r-search-field">
-		{$nomusuario_editcontrol1}
-	</div>
-	
-</div>
-
-{END nomusuario_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

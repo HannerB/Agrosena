@@ -1,0 +1,433 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c" data-pageid="{$pageid}"	{$cell_top_c}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<img src="{$file_url images/logo.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" data-page="registros_add" />
+	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" data-page="registros_add" >{$pagetitlelabel registros add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN nombre_completo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nombre_completo}  r-vertical-field" 
+	data-signal-error-for="nombre_completo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="nombre_completo" data-fieldname="nombre_completo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_nombre_completo}">
+		{BEGIN nombre_completo_label}{$label registros nombre_completo }{END nombre_completo_label}
+	</label>
+	<div class="r-edit-field">
+		{$nombre_completo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="nombre_completo" {$tooltipAttr registros nombre_completo } >
+		<div class="text-muted" >
+		{$tooltip registros nombre_completo }		</div>
+	</div>
+</div>
+
+
+{END nombre_completo_fieldblock}
+											
+{BEGIN edad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_edad}  r-vertical-field" 
+	data-signal-error-for="edad{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="edad" data-fieldname="edad" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_edad}">
+		{BEGIN edad_label}{$label registros edad }{END edad_label}
+	</label>
+	<div class="r-edit-field">
+		{$edad_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="edad" {$tooltipAttr registros edad } >
+		<div class="text-muted" >
+		{$tooltip registros edad }		</div>
+	</div>
+</div>
+
+
+{END edad_fieldblock}
+											
+{BEGIN tipo_doc_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tipo_doc}  r-vertical-field" 
+	data-signal-error-for="tipo_doc{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="tipo_doc" data-fieldname="tipo_doc" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_tipo_doc}">
+		{BEGIN tipo_doc_label}{$label registros tipo_doc }{END tipo_doc_label}
+	</label>
+	<div class="r-edit-field">
+		{$tipo_doc_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="tipo_doc" {$tooltipAttr registros tipo_doc } >
+		<div class="text-muted" >
+		{$tooltip registros tipo_doc }		</div>
+	</div>
+</div>
+
+
+{END tipo_doc_fieldblock}
+											
+{BEGIN otro_doc_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_otro_doc}  r-vertical-field" 
+	data-signal-error-for="otro_doc{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="otro_doc" data-fieldname="otro_doc" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_otro_doc}">
+		{BEGIN otro_doc_label}{$label registros otro_doc }{END otro_doc_label}
+	</label>
+	<div class="r-edit-field">
+		{$otro_doc_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="otro_doc" {$tooltipAttr registros otro_doc } >
+		<div class="text-muted" >
+		{$tooltip registros otro_doc }		</div>
+	</div>
+</div>
+
+
+{END otro_doc_fieldblock}
+											
+{BEGIN num_doc_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_num_doc}  r-vertical-field" 
+	data-signal-error-for="num_doc{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="num_doc" data-fieldname="num_doc" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_num_doc}">
+		{BEGIN num_doc_label}{$label registros num_doc }{END num_doc_label}
+	</label>
+	<div class="r-edit-field">
+		{$num_doc_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="num_doc" {$tooltipAttr registros num_doc } >
+		<div class="text-muted" >
+		{$tooltip registros num_doc }		</div>
+	</div>
+</div>
+
+
+{END num_doc_fieldblock}
+											
+{BEGIN correo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_correo}  r-vertical-field" 
+	data-signal-error-for="correo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="correo" data-fieldname="correo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_correo}">
+		{BEGIN correo_label}{$label registros correo }{END correo_label}
+	</label>
+	<div class="r-edit-field">
+		{$correo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="correo" {$tooltipAttr registros correo } >
+		<div class="text-muted" >
+		{$tooltip registros correo }		</div>
+	</div>
+</div>
+
+
+{END correo_fieldblock}
+											
+{BEGIN celular_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_celular}  r-vertical-field" 
+	data-signal-error-for="celular{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="celular" data-fieldname="celular" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_celular}">
+		{BEGIN celular_label}{$label registros celular }{END celular_label}
+	</label>
+	<div class="r-edit-field">
+		{$celular_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="celular" {$tooltipAttr registros celular } >
+		<div class="text-muted" >
+		{$tooltip registros celular }		</div>
+	</div>
+</div>
+
+
+{END celular_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN institucion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_institucion}  r-vertical-field" 
+	data-signal-error-for="institucion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="institucion" data-fieldname="institucion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_institucion}">
+		{BEGIN institucion_label}{$label registros institucion }{END institucion_label}
+	</label>
+	<div class="r-edit-field">
+		{$institucion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="institucion" {$tooltipAttr registros institucion } >
+		<div class="text-muted" >
+		{$tooltip registros institucion }		</div>
+	</div>
+</div>
+
+
+{END institucion_fieldblock}
+											
+{BEGIN aprendiz_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_aprendiz}  r-vertical-field" 
+	data-signal-error-for="aprendiz{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="aprendiz" data-fieldname="aprendiz" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_aprendiz}">
+		{BEGIN aprendiz_label}{$label registros aprendiz }{END aprendiz_label}
+	</label>
+	<div class="r-edit-field">
+		{$aprendiz_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="aprendiz" {$tooltipAttr registros aprendiz } >
+		<div class="text-muted" >
+		{$tooltip registros aprendiz }		</div>
+	</div>
+</div>
+
+
+{END aprendiz_fieldblock}
+											
+{BEGIN conocimientos_b_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_conocimientos_b}  r-vertical-field" 
+	data-signal-error-for="conocimientos_b{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="conocimientos_b" data-fieldname="conocimientos_b" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_conocimientos_b}">
+		{BEGIN conocimientos_b_label}{$label registros conocimientos_b }{END conocimientos_b_label}
+	</label>
+	<div class="r-edit-field">
+		{$conocimientos_b_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="conocimientos_b" {$tooltipAttr registros conocimientos_b } >
+		<div class="text-muted" >
+		{$tooltip registros conocimientos_b }		</div>
+	</div>
+</div>
+
+
+{END conocimientos_b_fieldblock}
+											
+{BEGIN disponibilidad_b_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_disponibilidad_b}  r-vertical-field" 
+	data-signal-error-for="disponibilidad_b{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="disponibilidad_b" data-fieldname="disponibilidad_b" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_disponibilidad_b}">
+		{BEGIN disponibilidad_b_label}{$label registros disponibilidad_b }{END disponibilidad_b_label}
+	</label>
+	<div class="r-edit-field">
+		{$disponibilidad_b_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="disponibilidad_b" {$tooltipAttr registros disponibilidad_b } >
+		<div class="text-muted" >
+		{$tooltip registros disponibilidad_b }		</div>
+	</div>
+</div>
+
+
+{END disponibilidad_b_fieldblock}
+											
+{BEGIN lectura_b_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_lectura_b}  r-vertical-field" 
+	data-signal-error-for="lectura_b{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="lectura_b" data-fieldname="lectura_b" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_lectura_b}">
+		{BEGIN lectura_b_label}{$label registros lectura_b }{END lectura_b_label}
+	</label>
+	<div class="r-edit-field">
+		{$lectura_b_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="lectura_b" {$tooltipAttr registros lectura_b } >
+		<div class="text-muted" >
+		{$tooltip registros lectura_b }		</div>
+	</div>
+</div>
+
+
+{END lectura_b_fieldblock}
+											
+{BEGIN autoriza_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_autoriza}  r-vertical-field" 
+	data-signal-error-for="autoriza{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="autoriza" data-fieldname="autoriza" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_autoriza}">
+		{BEGIN autoriza_label}{$label registros autoriza }{END autoriza_label}
+	</label>
+	<div class="r-edit-field">
+		{$autoriza_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="autoriza" {$tooltipAttr registros autoriza } >
+		<div class="text-muted" >
+		{$tooltip registros autoriza }		</div>
+	</div>
+</div>
+
+
+{END autoriza_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-success   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Volver" href="javascript:void(0)" typeid="ib" >
+							Volver			</a>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

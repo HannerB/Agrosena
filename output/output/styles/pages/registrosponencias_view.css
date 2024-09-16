@@ -1,0 +1,88 @@
+[data-cellid="grid_c"][data-page="registrosponencias_view"][data-cellid="grid_c"][data-page="registrosponencias_view"][data-cellid="grid_c"][data-page="registrosponencias_view"] {
+  width: 33.33%;
+  padding-top: 10px;
+}
+[data-cellid="grid_c2"][data-page="registrosponencias_view"][data-cellid="grid_c2"][data-page="registrosponencias_view"][data-cellid="grid_c2"][data-page="registrosponencias_view"] {
+  width: 33.33%;
+}
+[data-cellid="grid_c14"][data-page="registrosponencias_view"][data-cellid="grid_c14"][data-page="registrosponencias_view"][data-cellid="grid_c14"][data-page="registrosponencias_view"] {
+  width: 33.33%;
+}
+[data-page="registrosponencias_view"][data-itemid="image"] {
+  width: 300px;
+}
+[data-page="registrosponencias_view"][data-itemid="text"] {
+  color: #005008;
+  font-weight: bold;
+  font-size: 30px;
+}
+[data-page="registrosponencias_view"][data-itemid="text7"] {
+  font-size: 22px;
+}
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > * > input,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > * > textarea,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > * > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > .form-control-static,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > [id^=view],
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] label,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field"] > * > .r-readonly-control {
+  font-weight: bold;
+  font-size: 23px;
+}
+[data-page="registrosponencias_view"][data-itemid="text8"] {
+  font-size: 20px;
+}
+[data-page="registrosponencias_view"][data-itemid="image1"] {
+  width: 250px;
+  padding-top: 50px;
+}
+[data-page="registrosponencias_view"][data-itemid="image2"] {
+  width: 90px;
+}
+[data-page="registrosponencias_view"][data-itemid="image3"] {
+  width: 320px;
+}
+[data-page="registrosponencias_view"][data-itemid="text12"] {
+  font-size: 20px;
+}
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > * > input,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > * > textarea,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > * > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > .form-control-static,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > [id^=view],
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] label,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field1"] > * > .r-readonly-control {
+  font-weight: bold;
+  font-size: 18px;
+}
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > * > input,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > * > textarea,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > * > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > .form-control-static,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > [id^=view],
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] label,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field2"] > * > .r-readonly-control {
+  font-weight: bold;
+  font-size: 18px;
+}
+[data-page="registrosponencias_view"][data-itemid="edit_field_label"][data-page="registrosponencias_view"][data-itemid="edit_field_label"][data-page="registrosponencias_view"][data-itemid="edit_field_label"][data-page="registrosponencias_view"][data-itemid="edit_field_label"] {
+  font-size: 18px;
+}
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > * > input,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > * > textarea,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > * > * > select,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > .form-control-static,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > [id^=view],
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] label,
+[data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"][data-page="registrosponencias_view"][data-itemid="integrated_edit_field3"] > * > .r-readonly-control {
+  font-size: 20px;
+}
+[data-page="registrosponencias_view"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+

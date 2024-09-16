@@ -376,6 +376,86 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="usuario")
+		{
+			return false;
+		}
+		if($table=="registros_descargar")
+		{
+			return false;
+		}
+		if($table=="registros_ponentes")
+		{
+			return false;
+		}
+		if($table=="registros_participantes")
+		{
+			return false;
+		}
+		if($table=="registros_poster")
+		{
+			return false;
+		}
+		if($table=="rol")
+		{
+			return false;
+		}
+		if($table=="registros_vista")
+		{
+			return false;
+		}
+		if($table=="evaluador")
+		{
+			return false;
+		}
+		if($table=="preguntas")
+		{
+			return false;
+		}
+		if($table=="calificacion")
+		{
+			return false;
+		}
+		if($table=="resultado")
+		{
+			return false;
+		}
+		if($table=="resultado_grupos")
+		{
+			return false;
+		}
+		if($table=="resultado reto1")
+		{
+			return false;
+		}
+		if($table=="resultado reto2")
+		{
+			return false;
+		}
+		if($table=="resultado reto3")
+		{
+			return false;
+		}
+		if($table=="Resultados")
+		{
+			return false;
+		}
+		if($table=="registros_asistente")
+		{
+			return false;
+		}
+		if($table=="registrosParticipantes")
+		{
+			return false;
+		}
+		if($table=="registrosPoster")
+		{
+			return false;
+		}
+		if($table=="registrosPonencias")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -701,6 +781,86 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="registros")
+		{
+			return false;
+		}
+		if($table=="usuario")
+		{
+			return false;
+		}
+		if($table=="registros_descargar")
+		{
+			return false;
+		}
+		if($table=="registros_ponentes")
+		{
+			return false;
+		}
+		if($table=="registros_participantes")
+		{
+			return false;
+		}
+		if($table=="registros_poster")
+		{
+			return false;
+		}
+		if($table=="rol")
+		{
+			return false;
+		}
+		if($table=="registros_vista")
+		{
+			return false;
+		}
+		if($table=="evaluador")
+		{
+			return false;
+		}
+		if($table=="preguntas")
+		{
+			return false;
+		}
+		if($table=="calificacion")
+		{
+			return false;
+		}
+		if($table=="resultado")
+		{
+			return false;
+		}
+		if($table=="resultado_grupos")
+		{
+			return false;
+		}
+		if($table=="resultado reto1")
+		{
+			return false;
+		}
+		if($table=="resultado reto2")
+		{
+			return false;
+		}
+		if($table=="resultado reto3")
+		{
+			return false;
+		}
+		if($table=="Resultados")
+		{
+			return false;
+		}
+		if($table=="registros_asistente")
+		{
+			return false;
+		}
+		if($table=="registrosParticipantes")
+		{
+			return false;
+		}
+		if($table=="registrosPoster")
+		{
+			return false;
+		}
+		if($table=="registrosPonencias")
 		{
 			return false;
 		}

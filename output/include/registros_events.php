@@ -15,6 +15,8 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["BeforeShowAdd"]=true;
+
 
 	}
 
@@ -156,6 +158,86 @@ if($data){
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowAdd(&$xt, &$templatefile, $pageObject)
+{
+
+		$tipo = $_GET['type'];
+
+$pageObject->setProxyValue('name', $tipo);
+
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeShowAdd
+
 		
 		
 		

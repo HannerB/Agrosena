@@ -248,6 +248,25 @@ class ConnectionManager_Base
 		$connectionsIds["integrantes"] = "jovenes_gober_at_107_180_57_13";
 		$connectionsIds["retos"] = "jovenes_gober_at_107_180_57_13";
 		$connectionsIds["registros"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["usuario"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_descargar"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_ponentes"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_participantes"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_poster"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["rol"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_vista"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["evaluador"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["preguntas"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["calificacion"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["resultado"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["resultado_grupos"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["resultado reto1"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["resultado reto2"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["resultado reto3"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registros_asistente"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registrosParticipantes"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registrosPoster"] = "jovenes_gober_at_107_180_57_13";
+		$connectionsIds["registrosPonencias"] = "jovenes_gober_at_107_180_57_13";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

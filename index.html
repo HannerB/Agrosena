@@ -80,8 +80,11 @@ Copyright 2023
                                 <li><a href="#subitem2" id="agendaCongreso"
                                         class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Agenda Congreso</a>
                                 </li>
-                                <li><a id="downloadLink" class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        onclick="downloadFiles();">Convocatoria</a></li>
+                                <li><a href="assets/docs/Directrices-para-autores.pdf" download="Directrices-para-autores"
+                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Convocatoria</a></li>
+                                <li><a href="assets/docs/Modelo-Declaracion-de-originalidad.docx"
+                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Modelo Declaración de
+                                        la originalidad</a></li>
                             </ul>
                         </li>
                         <li class="nav-item relative group">
@@ -90,18 +93,18 @@ Copyright 2023
                                 class="sub-menu absolute hidden bg-white border border-[#ddd] rounded-lg shadow-lg group-hover:block">
                                 <li>
                                     <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/registros_add.php"
-                                        onclick="redirectToUrl(event)">Registro para retos</a>
+                                        data-url="output/registros_add.php" onclick="redirectToUrl(event)">Registro para
+                                        retos</a>
                                 </li>
                                 <li>
                                     <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/add_ponencias_add.php"
-                                        onclick="redirectToUrl(event)">Registro para ponencias</a>
+                                        data-url="output/add_ponencias_add.php" onclick="redirectToUrl(event)">Registro
+                                        para ponencias</a>
                                 </li>
                                 <li>
                                     <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/add_poster_add.php"
-                                        onclick="redirectToUrl(event)">Registro para poster</a>
+                                        data-url="output/add_poster_add.php" onclick="redirectToUrl(event)">Registro
+                                        para poster</a>
                                 </li>
                                 <li>
                                     <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
@@ -115,28 +118,7 @@ Copyright 2023
             </div>
         </nav>
     </header>
-    <script>
-        function downloadFiles() {
-            // Primer archivo
-            const file1 = document.createElement('a');
-            file1.href = 'Directrices-para-autores.pdf'; // Ruta del primer archivo
-            file1.download = 'Directrices-para-autores-e-investigadores';
-            file1.style.display = 'none';
-            document.body.appendChild(file1);
-            file1.click();
-            document.body.removeChild(file1);
 
-            // Segundo archivo
-            const file2 = document.createElement('a');
-            file2.href = 'Modelo-Declaracion-de-originalidad.docx'; // Ruta del segundo archivo
-            file2.download = 'Modelo-Declaracion-de-originalidad';
-            file2.style.display = 'none';
-            document.body.appendChild(file2);
-            file2.click();
-            document.body.removeChild(file2);
-        }
-
-    </script>
     <script>
         function redirectToUrl(event) {
             event.preventDefault(); // Previene la acción por defecto del enlace
@@ -606,7 +588,8 @@ Copyright 2023
                                     <h4
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         02:00 - 02:30 pm / 02:30 - 03:00 pm
-                                        <span class="ml-[15px] text-[#999] text-[14px]">- Taller de Creatividad </span>
+                                        <span class="ml-[15px] text-[#999] text-[14px]">- Taller de Creatividad - Retos
+                                        </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
                                     </p>
@@ -623,7 +606,7 @@ Copyright 2023
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         03:00 - 03:30 pm / 03:30 - 04:00 pm <span
                                             class="ml-[15px] text-[#999] text-[14px]">-
-                                            Taller de Innovación </span></h4>
+                                            Taller de Innovación - Retos </span></h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
                                     </p>
                                 </div>
@@ -656,7 +639,7 @@ Copyright 2023
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         04:30 - 05:30 pm / 05:30 - 06:00 pm <span
                                             class="ml-[15px] text-[#999] text-[14px]">-
-                                            Taller de prototipado </span>
+                                            Taller de prototipado - Retos </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
                                     </p>
@@ -722,7 +705,7 @@ Copyright 2023
                                         class="text-[16px] leading-[22px] font-semibold mt-[15px] mb-[6px] text-[#6CB630]">
                                         08:30 - 09:30 am / 09:30 - 10:30 am <span
                                             class="ml-[15px] text-[#999] text-[14px]">-
-                                            Bootcamp </span>
+                                            Desarrollo de los Retos </span>
                                     </h4>
                                     <p class="text-[13px] text-[#777] mb-0 leading-[28px]">
                                     </p>

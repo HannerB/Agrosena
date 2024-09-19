@@ -26,6 +26,8 @@ Copyright 2023
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- SweetAlert y script AJAX con animación de carga -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="overflow-x-hidden">
@@ -80,11 +82,14 @@ Copyright 2023
                                 <li><a href="#subitem2" id="agendaCongreso"
                                         class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Agenda Congreso</a>
                                 </li>
-                                <li><a href="assets/docs/Directrices-para-autores.pdf" download="Directrices-para-autores"
-                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Convocatoria</a></li>
-                                <li><a href="assets/docs/Modelo-Declaracion-de-originalidad.docx"
-                                        class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]">Modelo Declaración de
-                                        la originalidad</a></li>
+                                <li>
+                                    <a data-id="convocatoria" class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
+                                        onclick="downloadFile(this)">Convocatoria</a>
+                                </li>
+                                <li>
+                                    <a data-id="modelo" class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
+                                        onclick="downloadFile(this)">Modelo Declaración de la originalidad</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item relative group">
@@ -118,6 +123,25 @@ Copyright 2023
             </div>
         </nav>
     </header>
+
+    <script>
+        const files = {
+            convocatoria: 'assets/docs/Directrices-para-autores.pdf',
+            modelo: 'assets/docs/Modelo-Declaracion-de-originalidad.docx'
+        };
+
+        function downloadFile(link) {
+            const id = link.getAttribute('data-id'); // Obtener el ID del atributo data-id
+            const url = files[id]; // Obtener la URL desde el objeto files
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = url.split('/').pop(); // Nombre del archivo
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
 
     <script>
         function redirectToUrl(event) {
@@ -1531,7 +1555,8 @@ Copyright 2023
         </div>
         <div class="2xl:border-b lg:border-b  pt-0 flex justify-center items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-6"
             data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-            <a href="Terminos-y-Condiciones-de-participación-de-los-Retos.pdf" download="Términos-y-condiciones"
+            <a href="assets/docs/Terminos-y-Condiciones-de-participación-de-los-Retos.pdf"
+                download="Términos-y-condiciones"
                 class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 mb-5"
                 id="submitBtn">
                 Términos y Condiciones
@@ -1663,11 +1688,8 @@ Copyright 2023
                 class="text-center mt-[5px] 2xl:text-[35px] xl:text-[33px] lg:text-[30px] md:text-[26px] sm:text-[24px] text-[22px] font-bold">
                 Colócate en <span class="text-[#6CB630]">contacto</span></h2>
         </div>
+        <!-- Formulario de Contacto -->
         <form method="post" action="correo.php" autocomplete="off" id="contactForm">
-            <!-- Formulario de Contacto -->
-
-            <!-- FIN de Contacto -->
-
             <div
                 class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-[320px]:px-[12px] px-6">
                 <div class="m-b-minus-24px w-full">
@@ -1676,55 +1698,39 @@ Copyright 2023
                         <div class="mb-0">
                             <div class="">
                                 <input type="text"
-                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="name" id="fname" placeholder="Nombre">
                             </div>
                             <div class="pt-2">
                                 <input type="email"
-                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="email" id="email" placeholder="Correo Electrónico">
                             </div>
                             <div class="pt-2">
                                 <input type="tel"
-                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
-                                    name="telefono" id="phone" placeholder="Telefono">
+                                    class="input-field appearance-none w-full border rounded-xl py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    name="telefono" id="phone" placeholder="Teléfono">
                             </div>
                         </div>
                         <div class="mb-0">
                             <div class="">
                                 <textarea
-                                    class="input-field appearance-none w-full border rounded-xl  py-6 px-3 text-gray-700 leading-tight focus:outline-none"
+                                    class="input-field appearance-none w-full border rounded-xl py-6 px-3 text-gray-700 leading-tight focus:outline-none"
                                     name="mensaje" id="exampleFormControlTextarea1" rows="9"
                                     placeholder="Mensaje"></textarea>
                             </div>
                         </div>
                     </div>
 
-                    <style>
-
-                    </style>
                     <div class="grid lg:grid-cols-3 gap-[30px]" data-aos="fade-up" data-aos-duration="2000"
                         data-aos-delay="300">
-                        <div class="">
-
-                        </div>
+                        <div class=""></div>
                         <div class="" style="text-align:center; vertical-align: middle;">
                             <button type="submit"
                                 class="text-white bg-[#6CB630] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2"
-                                id="submitBtn">
-                                Enviar
-                            </button>
-                            <script>
-                                document.getElementById("contactForm").addEventListener("submit", function (event) {
-                                    var submitBtn = document.getElementById("submitBtn");
-                                    submitBtn.disabled = true;
-                                    submitBtn.textContent = "Enviando...";
-                                });
-                            </script>
+                                id="submitBtn">Enviar</button>
                         </div>
-                        <div class="">
-
-                        </div>
+                        <div class=""></div>
                     </div>
                 </div>
             </div>

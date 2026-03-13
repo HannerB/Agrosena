@@ -92,32 +92,6 @@ Copyright 2023
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item relative group">
-                            <a class="block py-2 pr-4 pl-3 text-[#064E00] lg:p-0">Regístrate</a>
-                            <ul
-                                class="sub-menu absolute hidden bg-white border border-[#ddd] rounded-lg shadow-lg group-hover:block">
-                                <li>
-                                    <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/registros_add.php" onclick="redirectToUrl(event)">Registro para
-                                        retos</a>
-                                </li>
-                                <li>
-                                    <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/add_ponencias_add.php" onclick="redirectToUrl(event)">Registro
-                                        para ponencias</a>
-                                </li>
-                                <li>
-                                    <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/add_poster_add.php" onclick="redirectToUrl(event)">Registro
-                                        para poster</a>
-                                </li>
-                                <li>
-                                    <a class="block py-2 px-4 text-[#064E00] hover:bg-[#f0f0f0]"
-                                        data-url="output/add_asistentes_add.php"
-                                        onclick="redirectToUrl(event)">Asistentes</a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -143,13 +117,6 @@ Copyright 2023
         }
     </script>
 
-    <script>
-        function redirectToUrl(event) {
-            event.preventDefault(); // Previene la acción por defecto del enlace
-            const url = event.currentTarget.getAttribute('data-url');
-            window.location.href = url; // Redirige a la URL especificada
-        }
-    </script>
 
     <!-- Modal -->
     <div id="modalInfoCongreso"
